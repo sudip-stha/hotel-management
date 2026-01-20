@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+$primary-50: #e8f1fd;
+$primary-500: #1570ef;
+$primary-600: #1366d9;
+$primary-700: #0f50aa;
+
+$Grey-600: #5d6679;
+$Grey-400: #858d9d;
+
+@mixin inter-medium($font-size: 14px) {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: $font-size;
+  font-style: normal;
+}

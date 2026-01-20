@@ -1,21 +1,7 @@
-import data from "../data.json";
+import type { NavListing } from "../types/data";
+import asideData from "../data/aside";
 
-interface aside {
-  logo: string;
-  title: string;
-}
-
-interface navitem {
-  label: string;
-  icon: string;
-  URL: string;
-}
-
-interface navListing {
-  navList: navitem[];
-}
-
-const NavList = ({ navList }: navListing) => {
+const NavList = ({ navList }: NavListing) => {
   return (
     <ul className="nav">
       {navList.map((data) => {
@@ -33,15 +19,14 @@ const NavList = ({ navList }: navListing) => {
 };
 
 const Aside = () => {
-  const rawData: aside = data.aside;
   return (
-    <div>
+    <aside>
       <div className="logo">
-        <img src={rawData.logo} alt="This is a logo." />
-        <h1>{rawData.title}</h1>
+        <img src={asideData.logo} alt="This is a logo." />
+        <h1>{asideData.title}</h1>
       </div>
-      <NavList navList={data.aside.navList} />
-    </div>
+      <NavList navList={asideData.navList} />
+    </aside>
   );
 };
 

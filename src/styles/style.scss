@@ -1,0 +1,43 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#page {
+  display: flex;
+}
+
+aside {
+  height: 100vh;
+  padding: 2.3rem 3.2rem 2rem 1.5rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  ul {
+    list-style: none;
+    @include inter-medium;
+    color: $Grey-600;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    li {
+      display: flex;
+      gap: 0.9rem;
+      align-items: center;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+
+  h1 {
+    @include inter-medium($font-size: 26px);
+    color: #2f7beb;
+  }
+}
