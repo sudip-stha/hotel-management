@@ -15,3 +15,11 @@ $Grey-400: #858d9d;
   font-size: $font-size;
   font-style: normal;
 }
+
+@mixin inter-regular($font-size: 16px) {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: $font-size;
+  font-style: normal;
+}

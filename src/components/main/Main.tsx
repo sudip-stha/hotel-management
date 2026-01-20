@@ -2,10 +2,10 @@ import Header from "./Header";
 
 const Main = () => {
   return (
-    <div>
+    <main>
       <Header />
       <h2>Main</h2>
-    </div>
+    </main>
   );
 };
 
