@@ -43,5 +43,4 @@ const asideData = {
   navList,
 };
 
-export default  asideData;
-
+export default asideData;
