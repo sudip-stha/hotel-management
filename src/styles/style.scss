@@ -6,6 +6,23 @@
   box-sizing: border-box;
 }
 
+.btn {
+  padding: 0.47rem 1rem;
+  color:$Grey-500;
+  @include inter-medium;
+  background: transparent;
+}
+
+.primary-btn{
+  border:1px solid $Grey-300;
+  border-radius: 100px;
+}
+
+.secondary-btn{
+  border: 1px solid $Grey-400;
+  border-radius: 8px;
+}
+
 #page {
   display: flex;
 }

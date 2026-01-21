@@ -5,8 +5,10 @@ $primary-500: #1570ef;
 $primary-600: #1366d9;
 $primary-700: #0f50aa;
 
-$Grey-600: #5d6679;
+$Grey-300:#989FAD;
 $Grey-400: #858d9d;
+$Grey-500:#667085;
+$Grey-600: #5d6679;
 
 @mixin inter-medium($font-size: 14px) {
   font-family: "Inter", sans-serif;
