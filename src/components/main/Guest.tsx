@@ -1,29 +1,98 @@
-import { buttonValue, tableData, input } from "../../data/guest";
+import {
+  buttonValue,
+  tableData,
+  input,
+  btn3,
+  btn4,
+  btn5,
+} from "../../data/guest";
+import type {
+  NumberListType,
+  StringListType,
+  StringType,
+} from "../../types/data";
 import PrimaryButton from "../buttons/PrimaryButton";
 import SecondaryButton from "../buttons/SecondaryButton";
 import Input from "../input/Input";
 
-const IdListing=()=>{
-  return(
+const Heading = ({ value }: StringType) => {
+  return <h6>{value}</h6>;
+};
+
+const IdListing = ({ item }: NumberListType) => {
+  return (
     <div className="id-col">
-      
+      {item.map((data, index) => {
+        return <span key={index}># {data}</span>;
+      })}
     </div>
-  )
-}
+  );
+};
+
+const StringListing = ({ item }: StringListType) => {
+  return (
+    <div className="id-col">
+      {item.map((data, index) => {
+        return <span key={index}>{data}</span>;
+      })}
+    </div>
+  );
+};
+
+const AmtListing = ({ item }: NumberListType) => {
+  return (
+    <div className="id-col">
+      {item.map((data, index) => {
+        return <span key={index}>$ {data}</span>;
+      })}
+    </div>
+  );
+};
+
+const PaginationList = ({ item }: NumberListType) => {
+  return (
+    <ul className="id-col">
+      {item.map((data, index) => {
+        return <li key={index}>{data}</li>;
+      })}
+    </ul>
+  );
+};
 
 const Guest = () => {
   return (
     <div className="container">
-      <h6>{tableData.title}</h6>
+      <Heading value={tableData.title} />
       <div>
         <PrimaryButton value={buttonValue.btn1} />
         <PrimaryButton value={buttonValue.btn2} />
-        <SecondaryButton value={buttonValue.btn3} />
+        <SecondaryButton value={btn3} />
         <Input value={input} />
       </div>
 
       <div className="table-container">
+        <Heading value={tableData.idTitle} />
+        <IdListing item={tableData.idValue} />
+
+        <Heading value={tableData.nameTitle} />
+        <StringListing item={tableData.nameValue} />
+
+        <Heading value={tableData.roomTitle} />
+        <StringListing item={tableData.roomNumber} />
+
+        <Heading value={tableData.amtTitle} />
+        <AmtListing item={tableData.amtValue} />
+
+        <Heading value={tableData.amtPaidTitle} />
+        <AmtListing item={tableData.amtPaidValue} />
+
+        <Heading value={tableData.statusTitle} />
+        <StringListing item={tableData.statusValue} />
       </div>
+
+      <SecondaryButton value={btn5} />
+      <PaginationList item={tableData.Pagination} />
+      <SecondaryButton value={btn4} />
     </div>
   );
 };

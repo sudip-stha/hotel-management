@@ -1,14 +1,23 @@
-import type { ButtonValue, Input } from "../types/data";
+import type { ButtonValue, Input, SecondaryBtnType } from "../types/data";
+
+export const btn3: SecondaryBtnType = {
+  title: "Filter",
+  icon: "/images/filterIcon.svg",
+};
+
+export const btn4: SecondaryBtnType = {
+  title: "Next",
+  icon: "/images/rightArrow.svg",
+};
+
+ export const btn5: SecondaryBtnType = {
+  title: "Previous",
+  icon: "/images/leftArrow.svg",
+};
 
 export const buttonValue: ButtonValue = {
   btn1: "Check in",
   btn2: "Check out",
-  btn3: "Filter",
-  filterIcon: "/images/filterIcon.svg",
-  btn4: "Next",
-  rightArrow: "/images/rightArrow.svg",
-  btn5: "Previous",
-  leftArrow: "/images/leftArrow.svg",
 };
 
 export const input: Input = {
@@ -73,6 +82,8 @@ const statusValue: string[] = [
   "Dirty",
 ];
 
+const Pagination: number[] = [1, 2, 3, 4, 5, 6, 7];
+
 export const tableData = {
   title,
   idTitle,
@@ -87,4 +98,5 @@ export const tableData = {
   amtPaidValue,
   statusTitle,
   statusValue,
+  Pagination,
 };

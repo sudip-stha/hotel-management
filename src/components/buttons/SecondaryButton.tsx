@@ -1,7 +1,12 @@
-import type { props } from "../../types/data";
+import type { SecondaryBtnTypeWrap } from "../../types/data";
 
-const SecondaryButton = ({ value }: props) => {
-  return <button className="btn secondary-btn">{value}</button>;
+const SecondaryButton = ({ value }: SecondaryBtnTypeWrap) => {
+  return (
+    <button className="btn secondary-btn">
+      {" "}
+      <img src={value.icon} alt="" /> {value.title}
+    </button>
+  );
 };
 
 export default SecondaryButton;

@@ -35,14 +35,26 @@ export interface Header {
 export interface ButtonValue {
   btn1: string;
   btn2: string;
-  btn3: string;
-  filterIcon: string;
-  btn4: string;
-  rightArrow: string;
-  btn5: string;
-  leftArrow: string;
 }
-//Button type checking
-export interface props {
+
+export interface SecondaryBtnType {
+  title: string;
+  icon: string;
+}
+
+export interface SecondaryBtnTypeWrap {
+  value:SecondaryBtnType;
+}
+
+
+export interface StringType {
   value: string;
+}
+
+export interface NumberListType {
+  item: number[];
+}
+
+export interface StringListType {
+  item: string[];
 }

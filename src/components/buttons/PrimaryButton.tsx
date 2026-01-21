@@ -1,7 +1,6 @@
-import type { props } from "../../types/data";
+import type { StringType } from "../../types/data";
 
-
-const PrimaryButton = ({ value }:props) => {
+const PrimaryButton = ({ value }: StringType) => {
   return <button className="btn primary-btn">{value}</button>;
 };
 
