@@ -1,10 +1,11 @@
-import type { HeaderItem } from "../types/data";
+import type { Header, Input } from "../types/data";
 
-const headerData: HeaderItem = {
+export const input: Input = {
   placeholder: "Search for rooms and offers",
   searchIcon: "/images/searchIcon.svg",
+};
+
+export const header: Header = {
   notificationIcon: "/images/notificationIcon.svg",
   profile: "/images/profile.jpg",
 };
-
-export default headerData;

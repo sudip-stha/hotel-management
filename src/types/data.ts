@@ -1,3 +1,5 @@
+import Header from "../components/main/Header";
+
 //Aside type checking
 export interface Aside {
   logo: string;
@@ -15,9 +17,16 @@ export interface NavListing {
 }
 
 //Header type checking
-export interface HeaderItem {
-  placeholder: string;
+export interface Input {
   searchIcon: string;
+  placeholder: string;
+}
+
+export interface InputAll {
+  value: Input;
+}
+
+export interface Header {
   notificationIcon: string;
   profile: string;
 }
@@ -33,4 +42,7 @@ export interface ButtonValue {
   btn5: string;
   leftArrow: string;
 }
-
+//Button type checking
+export interface props {
+  value: string;
+}

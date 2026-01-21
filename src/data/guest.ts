@@ -1,4 +1,4 @@
-import type { ButtonValue } from "../types/data";
+import type { ButtonValue, Input } from "../types/data";
 
 export const buttonValue: ButtonValue = {
   btn1: "Check in",
@@ -9,6 +9,11 @@ export const buttonValue: ButtonValue = {
   rightArrow: "/images/rightArrow.svg",
   btn5: "Previous",
   leftArrow: "/images/leftArrow.svg",
+};
+
+export const input: Input = {
+  placeholder: "Search by room number",
+  searchIcon: "/images/searchIcon.svg",
 };
 
 const title: string = "Guest";

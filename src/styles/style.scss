@@ -8,25 +8,42 @@
 
 .btn {
   padding: 0.47rem 1rem;
-  color:$Grey-500;
+  color: $Grey-500;
   @include inter-medium;
   background: transparent;
 }
 
-.primary-btn{
-  border:1px solid $Grey-300;
+.primary-btn {
+  border: 1px solid $Grey-300;
   border-radius: 100px;
 }
 
-.secondary-btn{
+.secondary-btn {
   border: 1px solid $Grey-400;
   border-radius: 8px;
+}
+
+.input-wrap {
+  position: relative;
+  img {
+    position: absolute;
+    left: 1.2rem;
+    top: 0.5rem;
+  }
+  input {
+    padding: 0.5rem 3rem;
+    @include inter-regular;
+    border: 1px solid #eef0f2;
+    background: transparent;
+    border-radius: 4px;
+  }
 }
 
 #page {
   display: flex;
 }
 
+// Aside styling
 aside {
   height: 100vh;
   padding: 2.3rem 3.2rem 2rem 1.5rem;
@@ -59,30 +76,20 @@ aside {
   }
 }
 
+
+// main styling
 main {
   width: 100vw;
 }
 
+
+// Header styling
 header {
   display: flex;
   padding: 1.7rem 0;
   margin-right: 1.2rem;
-}
-
-.input-wrap {
-  position: relative;
-  img {
-    position: absolute;
-    left: 1.2rem;
-    top: 0.5rem;
-  }
   input {
-    padding: 0.5rem 3rem;
-    @include inter-regular;
     width: 25rem;
-    border: 1px solid #eef0f2;
-    background: transparent;
-    border-radius: 4px;
   }
 }
 
