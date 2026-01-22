@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+$Dashboard: #eef0f2;
+
 $primary-50: #e8f1fd;
 $primary-500: #1570ef;
 $primary-600: #1366d9;
 $primary-700: #0f50aa;
 
-$Grey-300:#989FAD;
+$Grey-50: #f7f9fc;
+$Grey-100: #d0d3d9;
+$Grey-300: #989fad;
 $Grey-400: #858d9d;
-$Grey-500:#667085;
+$Grey-500: #667085;
 $Grey-600: #5d6679;
+$Grey-900: #2b2f38;
 
 @mixin inter-medium($font-size: 14px) {
   font-family: "Inter", sans-serif;
@@ -24,4 +29,36 @@ $Grey-600: #5d6679;
   font-weight: 400;
   font-size: $font-size;
   font-style: normal;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin stripe-bg {
+  z-index: -1;
+  background: repeating-linear-gradient(
+    to right,
+    $Dashboard 0%,
+    $Dashboard 19%,
+    white 19%,
+    white 20.5%,
+    $Dashboard 20.5%,
+    $Dashboard 39.5%,
+    white 39.5%,
+    white 41%,
+    $Dashboard 41%,
+    $Dashboard 60%,
+    white 60%,
+    white 61.5%,
+    $Dashboard 61.5%,
+    $Dashboard 80.5%,
+    white 80.5%,
+    white 82%,
+    $Dashboard 82%,
+    $Dashboard 98.5%,
+    white 98.5%,
+    white 100%
+  );
 }

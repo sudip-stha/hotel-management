@@ -10,7 +10,7 @@ export const btn4: SecondaryBtnType = {
   icon: "/images/rightArrow.svg",
 };
 
- export const btn5: SecondaryBtnType = {
+export const btn5: SecondaryBtnType = {
   title: "Previous",
   icon: "/images/leftArrow.svg",
 };
@@ -25,14 +25,14 @@ export const input: Input = {
   searchIcon: "/images/searchIcon.svg",
 };
 
-const title: string = "Guest";
+const title = "Guest";
 
 const idValue: number[] = [
   5644, 6112, 6141, 6535, 6541, 9846, 4921, 4921, 9841, 9841,
 ];
-const idTitle: string = "Reservation ID";
+const idTitle = "Reservation ID";
 
-const nameTitle: string = "Name";
+const nameTitle = "Name";
 const nameValue: string[] = [
   "Alexander",
   "Pegasus",
@@ -46,7 +46,7 @@ const nameValue: string[] = [
   "Turen",
 ];
 
-const roomTitle: string = "Room Number";
+const roomTitle = "Room Number";
 const roomNumber: string[] = [
   "A647",
   "A456",
@@ -60,15 +60,15 @@ const roomNumber: string[] = [
   "B641",
 ];
 
-const amtTitle: string = "Total amount";
+const amtTitle = "Total amount";
 const amtValue: number[] = [467, 645, 686, 8413, 841, 684, 984, 984, 984, 984];
 
-const amtPaidTitle: string = "Amount paid";
+const amtPaidTitle = "Amount paid";
 const amtPaidValue: number[] = [
   200, 250, 400, 2500, 400, 300, 513, 513, 600, 600,
 ];
 
-const statusTitle: string = "Status";
+const statusTitle = "Status";
 const statusValue: string[] = [
   "Clean",
   "Dirty",

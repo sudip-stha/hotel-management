@@ -21,7 +21,8 @@ const Heading = ({ value }: StringType) => {
 
 const IdListing = ({ item }: NumberListType) => {
   return (
-    <div className="id-col">
+    <div className="value-container">
+      {" "}
       {item.map((data, index) => {
         return <span key={index}># {data}</span>;
       })}
@@ -29,9 +30,9 @@ const IdListing = ({ item }: NumberListType) => {
   );
 };
 
-const StringListing = ({ item }: StringListType) => {
+const TextListing = ({ item }: StringListType) => {
   return (
-    <div className="id-col">
+    <div className="value-container">
       {item.map((data, index) => {
         return <span key={index}>{data}</span>;
       })}
@@ -41,7 +42,7 @@ const StringListing = ({ item }: StringListType) => {
 
 const AmtListing = ({ item }: NumberListType) => {
   return (
-    <div className="id-col">
+    <div className="value-container">
       {item.map((data, index) => {
         return <span key={index}>$ {data}</span>;
       })}
@@ -51,7 +52,7 @@ const AmtListing = ({ item }: NumberListType) => {
 
 const PaginationList = ({ item }: NumberListType) => {
   return (
-    <ul className="id-col">
+    <ul className="page-col">
       {item.map((data, index) => {
         return <li key={index}>{data}</li>;
       })}
@@ -63,31 +64,46 @@ const Guest = () => {
   return (
     <div className="container">
       <Heading value={tableData.title} />
-      <div>
-        <PrimaryButton value={buttonValue.btn1} />
-        <PrimaryButton value={buttonValue.btn2} />
-        <SecondaryButton value={btn3} />
-        <Input value={input} />
+      <div className="guest-btns-container">
+        <div className="guest-btns">
+          <PrimaryButton value={buttonValue.btn1} />
+          <PrimaryButton value={buttonValue.btn2} />
+        </div>
+        <div className="guest-btns guest-right-btn">
+          <SecondaryButton value={btn3} />
+          <Input value={input} />
+        </div>
       </div>
 
       <div className="table-container">
-        <Heading value={tableData.idTitle} />
-        <IdListing item={tableData.idValue} />
+        <div className="id-col">
+          <Heading value={tableData.idTitle} />
+          <IdListing item={tableData.idValue} />
+        </div>
 
-        <Heading value={tableData.nameTitle} />
-        <StringListing item={tableData.nameValue} />
+        <div className="col">
+          <Heading value={tableData.nameTitle} />
+          <TextListing item={tableData.nameValue} />
+        </div>
 
-        <Heading value={tableData.roomTitle} />
-        <StringListing item={tableData.roomNumber} />
+        <div className="col">
+          <Heading value={tableData.roomTitle} />
+          <TextListing item={tableData.roomNumber} />
+        </div>
 
-        <Heading value={tableData.amtTitle} />
-        <AmtListing item={tableData.amtValue} />
+        <div className="col">
+          <Heading value={tableData.amtTitle} />
+          <AmtListing item={tableData.amtValue} />
+        </div>
 
-        <Heading value={tableData.amtPaidTitle} />
-        <AmtListing item={tableData.amtPaidValue} />
-
-        <Heading value={tableData.statusTitle} />
-        <StringListing item={tableData.statusValue} />
+        <div className="col">
+          <Heading value={tableData.amtPaidTitle} />
+          <AmtListing item={tableData.amtPaidValue} />
+        </div>
+        <div className="col">
+          <Heading value={tableData.statusTitle} />
+          <TextListing item={tableData.statusValue} />
+        </div>
       </div>
 
       <SecondaryButton value={btn5} />

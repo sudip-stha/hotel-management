@@ -33,7 +33,7 @@
   input {
     padding: 0.5rem 3rem;
     @include inter-regular;
-    border: 1px solid #eef0f2;
+    border: 1px solid $Dashboard;
     background: transparent;
     border-radius: 4px;
   }
@@ -76,12 +76,11 @@ aside {
   }
 }
 
-
 // main styling
 main {
   width: 100vw;
+  @include stripe-bg;
 }
-
 
 // Header styling
 header {
@@ -99,5 +98,29 @@ header {
   gap: 2.1rem;
   :nth-of-type(-2n + 2) {
     border-radius: 50%;
+  }
+}
+
+//Guest component styling
+.container {
+  @include flex-col;
+  gap: 1.25rem;
+  h6 {
+    @include inter-medium($font-size: 12px);
+    color: $Grey-400;
+  }
+}
+
+.guest-btns-container {
+  display: flex;
+  margin: 0.7rem 1.25rem 0 0;
+
+  .guest-btns {
+    display: flex;
+    gap: 12px;
+  }
+
+  .guest-right-btn {
+    margin-left: auto;
   }
 }
