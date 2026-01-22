@@ -43,9 +43,8 @@ export interface SecondaryBtnType {
 }
 
 export interface SecondaryBtnTypeWrap {
-  value:SecondaryBtnType;
+  value: SecondaryBtnType;
 }
-
 
 export interface StringType {
   value: string;
@@ -57,4 +56,28 @@ export interface NumberListType {
 
 export interface StringListType {
   item: string[];
+}
+
+export interface tableDataType {
+  id: number;
+  name: string;
+  roomNumber: string;
+  totalAmt: number;
+  amtPaid: number;
+  status: string;
+  dotIcon: string;
+}
+
+export interface tableDataType {
+  id: number;
+  name: string;
+  roomNumber: string;
+  totalAmt: number;
+  amtPaid: number;
+  status: string;
+  dotIcon: string;
+}
+
+export interface tableDataTypeList {
+  tableData: tableDataType[];
 }

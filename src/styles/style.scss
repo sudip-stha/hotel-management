@@ -124,3 +124,35 @@ header {
     margin-left: auto;
   }
 }
+
+.table-container {
+  display: flex;
+
+  h6 {
+    padding: 1rem 0 1rem 1.5rem;
+  }
+
+  .col {
+    width: 9.9rem;
+    span {
+      @include inter-regular($font-size: 14px);
+      color: $Grey-600;
+    }
+  }
+
+  .id-col {
+    width: 9.9rem;
+    span {
+      @include inter-medium;
+      color: $Grey-900;
+    }
+  }
+}
+
+.value-container {
+  @include flex-col;
+
+  span {
+    padding: 1rem 0 1rem 1.5rem;
+  }
+}
