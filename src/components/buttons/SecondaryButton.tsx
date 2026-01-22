@@ -2,9 +2,9 @@ import type { SecondaryBtnTypeWrap } from "../../types/data";
 
 const SecondaryButton = ({ value }: SecondaryBtnTypeWrap) => {
   return (
-    <button className="btn secondary-btn">
+    <button className="btn">
       {" "}
-      <img src={value.icon} alt="" /> {value.title}
+      {value.title} <img src={value.icon} alt="" />
     </button>
   );
 };

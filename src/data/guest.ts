@@ -33,7 +33,7 @@ const input: Input = {
 const title = "Guest";
 
 const tableTitle: string[] = [
-  "Reservation Id",
+  "Reservation ID",
   "Name",
   "Room Number",
   "Total amount",

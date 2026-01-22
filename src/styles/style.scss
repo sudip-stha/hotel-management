@@ -10,17 +10,18 @@
   padding: 0.47rem 1rem;
   color: $Grey-500;
   @include inter-medium;
-  background: transparent;
+  border: 1px solid $Grey-400;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .primary-btn {
   border: 1px solid $Grey-300;
   border-radius: 100px;
-}
-
-.secondary-btn {
-  border: 1px solid $Grey-400;
-  border-radius: 8px;
 }
 
 .input-wrap {
@@ -34,12 +35,11 @@
     padding: 0.5rem 3rem;
     @include inter-regular;
     border: 1px solid $Dashboard;
-    background: transparent;
     border-radius: 4px;
   }
 }
 
-#page {
+.page {
   display: flex;
 }
 
@@ -47,15 +47,15 @@
 aside {
   height: 100vh;
   padding: 2.3rem 3.2rem 2rem 1.5rem;
-  display: flex;
+  @include flex-col;
   gap: 2rem;
-  flex-direction: column;
+  position: sticky;
+  top: 0;
   ul {
     list-style: none;
     @include inter-medium;
     color: $Grey-600;
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
     gap: 1.7rem;
     li {
       display: flex;
@@ -76,12 +76,6 @@ aside {
   }
 }
 
-// main styling
-main {
-  width: 100vw;
-  @include stripe-bg;
-}
-
 // Header styling
 header {
   display: flex;
@@ -89,6 +83,7 @@ header {
   margin-right: 1.2rem;
   input {
     width: 25rem;
+    background-color: $Grey-50;
   }
 }
 
@@ -122,37 +117,62 @@ header {
 
   .guest-right-btn {
     margin-left: auto;
+    input {
+      border: 1px solid $Grey-100;
+      border-radius: 8px;
+    }
   }
 }
 
 .table-container {
-  display: flex;
-
-  h6 {
-    padding: 1rem 0 1rem 1.5rem;
-  }
-
-  .col {
-    width: 9.9rem;
-    span {
-      @include inter-regular($font-size: 14px);
-      color: $Grey-600;
+  .table-head {
+    margin-right: 1.2rem;
+    background-color: $Grey-50;
+    border: 1px solid $primary-50;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    h6 {
+      padding: 1rem 0 1rem 1.5rem;
+      width: 12.75rem;
+      display: inline-block;
+      @include inter-medium($font-size: 12px);
+      color: $Grey-500;
     }
   }
 
-  .id-col {
-    width: 9.9rem;
+  .table-data {
+    border: 1px solid $primary-50;
+    padding: 1rem 0 1rem 1.5rem;
+    margin-right: 1.2rem;
     span {
+      @include inter-regular($font-size: 14px);
+      color: $Grey-600;
+      display: inline-block;
+      width: 12.75rem;
+    }
+    .id-col {
       @include inter-medium;
       color: $Grey-900;
+    }
+    .three-dot-col {
+      width: 1rem;
     }
   }
 }
 
-.value-container {
-  @include flex-col;
-
-  span {
-    padding: 1rem 0 1rem 1.5rem;
+.guest-bottom-btns {
+  display: flex;
+  gap: 23rem;
+  padding: 0.83rem 1.5rem;
+  margin-bottom: 4rem;
+  .page-col {
+    list-style: none;
+    display: flex;
+    gap: 2px;
+    li {
+      padding: 0.6rem 1rem;
+      @include inter-medium;
+      color: $Grey-400;
+    }
   }
 }
