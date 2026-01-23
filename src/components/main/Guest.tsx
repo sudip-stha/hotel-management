@@ -22,7 +22,6 @@ const PaginationList = ({ item }: NumberListType) => {
 };
 
 const Guest = () => {
- 
   return (
     <div className="container">
       <Heading value={guestData.title} />

@@ -1,17 +1,18 @@
 import type { NavListing } from "../types/data";
 import asideData from "../data/aside";
+import { Link } from "react-router-dom";
 
 const NavList = ({ navList }: NavListing) => {
   return (
     <ul className="nav">
       {navList.map((data) => {
         return (
-          <li key={data.URL}>
-            <span>
+          <Link to={data.URL} key={data.URL} className="nav-list">
+            <li>
               <img src={data.icon} alt="This is a icon." />
-            </span>
-            <span>{data.label}</span>
-          </li>
+              <span>{data.label}</span>
+            </li>
+          </Link>
         );
       })}
     </ul>

@@ -7,16 +7,16 @@ const TableData = ({ data }: tableDataTypeList) => {
         let statusClass = "Clean";
         if (value.status === "Clean") {
           statusClass = "Clean";
-        }else if(value.status==="Dirty"){
-          statusClass="Dirty";
-        }else if(value.status==="Inspected"){
-          statusClass="Inspected";
-        }else if(value.status==="Pick up"){
-          statusClass="PickUp";
+        } else if (value.status === "Dirty") {
+          statusClass = "Dirty";
+        } else if (value.status === "Inspected") {
+          statusClass = "Inspected";
+        } else if (value.status === "Pick up") {
+          statusClass = "PickUp";
         }
         return (
-          <div className="table-data" key={value.id}>
-            <span className="id-col"># {value.id}</span>
+          <div className="table-data" key={value.reservationId}>
+            <span className="id-col"># {value.reservationId}</span>
             <span>{value.name}</span>
             <span>{value.roomNumber}</span>
             <span>$ {value.totalAmt}</span>

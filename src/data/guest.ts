@@ -42,7 +42,7 @@ const tableTitle: string[] = [
 ];
 const tableData: tableDataType[] = [
   {
-    id: 5644,
+    reservationId: 5644,
     name: "Alexander",
     roomNumber: "A647",
     totalAmt: 467,
@@ -51,7 +51,7 @@ const tableData: tableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
-    id: 6112,
+    reservationId: 6112,
     name: "Pegasus",
     roomNumber: "A456",
     totalAmt: 645,
@@ -60,7 +60,7 @@ const tableData: tableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
-    id: 6141,
+    reservationId: 6141,
     name: "Martin",
     roomNumber: "A645",
     totalAmt: 686,
@@ -69,7 +69,7 @@ const tableData: tableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
-    id: 6535,
+    reservationId: 6535,
     name: "Cecil",
     roomNumber: "A684",
     totalAmt: 8413,
@@ -78,7 +78,7 @@ const tableData: tableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
-    id: 6541,
+    reservationId: 6541,
     name: "Luke",
     roomNumber: "B464",
     totalAmt: 841,
@@ -87,7 +87,7 @@ const tableData: tableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
-    id: 9846,
+    reservationId: 9846,
     name: "Yadrin",
     roomNumber: "C648",
     totalAmt: 684,
@@ -96,7 +96,7 @@ const tableData: tableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
-    id: 4921,
+    reservationId: 4921,
     name: "Kiand",
     roomNumber: "D644",
     totalAmt: 984,
@@ -105,7 +105,7 @@ const tableData: tableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
-    id: 4921,
+    reservationId: 4921,
     name: "Kiand",
     roomNumber: "D644",
     totalAmt: 984,
@@ -114,7 +114,7 @@ const tableData: tableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
-    id: 9841,
+    reservationId: 9841,
     name: "Turen",
     roomNumber: "B641",
     totalAmt: 984,
@@ -123,7 +123,7 @@ const tableData: tableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
-    id: 9841,
+    reservationId: 9841,
     name: "Turen",
     roomNumber: "B641",
     totalAmt: 984,

@@ -53,8 +53,6 @@ aside {
   top: 0;
   ul {
     list-style: none;
-    @include inter-medium;
-    color: $Grey-600;
     @include flex-col;
     gap: 1.7rem;
     li {
@@ -63,6 +61,12 @@ aside {
       align-items: center;
     }
   }
+}
+
+.nav-list {
+  text-decoration: none;
+  @include inter-medium;
+  color: $Grey-600;
 }
 
 .logo {

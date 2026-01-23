@@ -59,7 +59,7 @@ export interface StringListType {
 }
 
 export interface tableDataType {
-  id: number;
+  reservationId: number;
   name: string;
   roomNumber: string;
   totalAmt: number;
