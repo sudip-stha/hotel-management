@@ -46,19 +46,23 @@
 // Aside styling
 aside {
   height: 100vh;
-  padding: 2.3rem 3.2rem 2rem 1.5rem;
   @include flex-col;
   gap: 2rem;
   position: sticky;
   top: 0;
+  .logo {
+    padding: 2.3rem 3.2rem 2rem 1.5rem;
+  }
   ul {
     list-style: none;
     @include flex-col;
-    gap: 1.7rem;
+    gap: 1rem;
+    margin: 0 0.9rem;
     li {
       display: flex;
       gap: 0.9rem;
       align-items: center;
+      padding: 8px 0.5rem;
     }
   }
 }
@@ -67,6 +71,17 @@ aside {
   text-decoration: none;
   @include inter-medium;
   color: $Grey-600;
+}
+
+.nav-list-active {
+  text-decoration: none;
+  @include inter-medium;
+  color: $Primary-600;
+  background-color: $Primary-50;
+  border-radius: 8px;
+  .icon-img path{
+    fill: $Primary-600;
+  }
 }
 
 .logo {

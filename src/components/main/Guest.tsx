@@ -1,15 +1,12 @@
 import { guestData } from "../../data/guest";
-import type { NumberListType, StringType } from "../../types/data";
+import type { NumberListType } from "../../types/data";
 import PrimaryButton from "../buttons/PrimaryButton";
 import Button from "../buttons/Button";
 import Input from "../input/Input";
 import TableData from "../table/TableData.js";
 import TableHead from "../table/TableHead.js";
 import SecondaryButton from "../buttons/SecondaryButton.js";
-
-const Heading = ({ value }: StringType) => {
-  return <h6>{value}</h6>;
-};
+import Heading from "./Heading.tsx";
 
 const PaginationList = ({ item }: NumberListType) => {
   return (
