@@ -2,10 +2,11 @@
 
 $Dashboard: #f3f3f4;
 
-$primary-50: #e8f1fd;
-$primary-500: #1570ef;
-$primary-600: #1366d9;
-$primary-700: #0f50aa;
+$Primary-50: #e8f1fd;
+$Primary-400: #448df2;
+$Primary-500: #1570ef;
+$Primary-600: #1366d9;
+$Primary-700: #0f50aa;
 
 $Grey-50: #f7f9fc;
 $Grey-100: #d0d3d9;
@@ -14,6 +15,15 @@ $Grey-400: #858d9d;
 $Grey-500: #667085;
 $Grey-600: #5d6679;
 $Grey-900: #2b2f38;
+
+$Error-50: #feeceb;
+$Error-400: #f36960;
+
+$Success-50: #e7f8f0;
+$Success-400: #41c588;
+
+$Warning-50: #fef4e6;
+$Warning-400: #f9a63a;
 
 @mixin inter-medium($font-size: 14px) {
   font-family: "Inter", sans-serif;
