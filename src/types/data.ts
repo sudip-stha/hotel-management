@@ -35,6 +35,7 @@ export interface Header {
 export interface ButtonValue {
   btn1: string;
   btn2: string;
+  btn3?: string;
 }
 
 export interface SecondaryBtnType {
@@ -47,7 +48,7 @@ export interface SecondaryBtnTypeWrap {
 }
 
 export interface StringType {
-  value: string;
+  value: string|undefined;
 }
 
 export interface NumberListType {
@@ -84,4 +85,17 @@ export interface DealTableDataType {
 
 export interface DealTableDataTypeList {
   data: DealTableDataType[];
+}
+
+export interface RoomTableDataType {
+  roomNumber: string;
+  bedType: string;
+  roomFloor: string;
+  roomFacility: string;
+  status: string;
+  dotIcon: string;
+}
+
+export interface RoomTableDataTypeList {
+  data: RoomTableDataType[];
 }

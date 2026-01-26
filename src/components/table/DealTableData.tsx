@@ -16,7 +16,7 @@ const DealTableData = ({ data }: DealTableDataTypeList) => {
         }
         return (
           <div className="table-data" key={value.referenceNumber}>
-            <span className="id-col"># {value.referenceNumber}</span>
+            <span className="id-col">#{value.referenceNumber}</span>
             <span>{value.dealName}</span>
             <span>{value.reservationLeft}</span>
             <span>{value.endDate}</span>

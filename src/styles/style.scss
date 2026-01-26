@@ -68,7 +68,7 @@ aside {
       display: flex;
       gap: 0.9rem;
       align-items: center;
-      padding: 8px 0.5rem;
+      padding: 0.5rem;
     }
   }
 }
@@ -85,16 +85,12 @@ aside {
   color: $Primary-600;
   background-color: $Primary-50;
   border-radius: 8px;
-  .icon-img {
-    fill: $Primary-600;
-  }
 }
 
 .logo {
   display: flex;
   gap: 1.3rem;
   align-items: center;
-
   h1 {
     @include inter-medium($font-size: 26px);
     color: #2f7beb;
@@ -105,7 +101,6 @@ aside {
 header {
   display: flex;
   padding: 1.7rem 0;
-  margin-right: 1.2rem;
   input {
     width: 25rem;
     background-color: $Grey-50;
@@ -133,7 +128,6 @@ header {
 
 .btns-container {
   display: flex;
-  margin: 0.7rem 1.25rem 0 0;
   .left-side-btns {
     display: flex;
     gap: 12px;
@@ -149,7 +143,6 @@ header {
 }
 
 .table-container {
-  margin-right: 1.2rem;
   .table-head {
     background-color: $Grey-50;
     border: 1px solid $Primary-50;
@@ -161,6 +154,12 @@ header {
       display: inline-block;
       @include inter-medium($font-size: 12px);
       color: $Grey-500;
+    }
+  }
+
+  .room-table-head {
+    :nth-child(-5n + 5) {
+      margin-left: 8rem;
     }
   }
 
@@ -194,6 +193,11 @@ header {
       border-radius: 16px;
     }
 
+    .room-tbl-status {
+      margin-left: 8rem;
+      margin-right: 4.4rem;
+    }
+
     .Clean {
       background-color: $Primary-50;
       color: $Primary-400;
@@ -218,8 +222,7 @@ header {
 
 .guest-bottom-btns {
   display: flex;
-  gap: 22rem;
-  padding: 0.83rem 1.5rem;
+  gap: 22.5rem;
   margin-bottom: 4rem;
   .page-col {
     list-style: none;

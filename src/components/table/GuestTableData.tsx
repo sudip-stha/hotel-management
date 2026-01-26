@@ -16,7 +16,7 @@ const GuestTableData = ({ data }: GuestTableDataTypeList) => {
         }
         return (
           <div className="table-data" key={value.reservationId}>
-            <span className="id-col"># {value.reservationId}</span>
+            <span className="id-col">#{value.reservationId}</span>
             <span>{value.name}</span>
             <span>{value.roomNumber}</span>
             <span>$ {value.totalAmt}</span>
