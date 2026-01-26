@@ -1,6 +1,6 @@
-import type { tableDataTypeList } from "../../types/data";
+import type { GuestTableDataTypeList } from "../../types/data";
 
-const TableData = ({ data }: tableDataTypeList) => {
+const GuestTableData = ({ data }: GuestTableDataTypeList) => {
   return (
     <>
       {data.map((value) => {
@@ -21,7 +21,9 @@ const TableData = ({ data }: tableDataTypeList) => {
             <span>{value.roomNumber}</span>
             <span>$ {value.totalAmt}</span>
             <span>$ {value.amtPaid}</span>
-            <span className={`status ${statusClass}`}>{value.status}</span>
+            <div className="status-container">
+              <span className={`status ${statusClass}`}>{value.status}</span>
+            </div>
             <span className="three-dot-col">
               <img src={value.dotIcon} alt="This is a dot icon." />
             </span>
@@ -32,4 +34,4 @@ const TableData = ({ data }: tableDataTypeList) => {
   );
 };
 
-export default TableData;
+export default GuestTableData;

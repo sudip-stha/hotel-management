@@ -58,7 +58,7 @@ export interface StringListType {
   item: string[];
 }
 
-export interface guestTableDataType {
+export interface GuestTableDataType {
   reservationId: number;
   name: string;
   roomNumber: string;
@@ -68,11 +68,11 @@ export interface guestTableDataType {
   dotIcon: string;
 }
 
-export interface tableDataTypeList {
-  data: guestTableDataType[];
+export interface GuestTableDataTypeList {
+  data: GuestTableDataType[];
 }
 
-export interface dealTableDataType {
+export interface DealTableDataType {
   referenceNumber: number;
   dealName: string;
   reservationLeft: number;
@@ -80,4 +80,8 @@ export interface dealTableDataType {
   roomType: string;
   status: string;
   dotIcon: string;
+}
+
+export interface DealTableDataTypeList {
+  data: DealTableDataType[];
 }

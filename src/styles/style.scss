@@ -24,7 +24,7 @@
   border-radius: 100px;
 }
 
-.add-btn{
+.add-btn {
   background-color: $Primary-500;
   color: white;
   border: none;
@@ -131,15 +131,15 @@ header {
   }
 }
 
-.guest-btns-container {
+.btns-container {
   display: flex;
   margin: 0.7rem 1.25rem 0 0;
-  .guest-btns {
+  .left-side-btns {
     display: flex;
     gap: 12px;
   }
 
-  .guest-right-btn {
+  .right-side-btn {
     margin-left: auto;
     input {
       border: 1px solid $Grey-100;
@@ -149,8 +149,8 @@ header {
 }
 
 .table-container {
+  margin-right: 1.2rem;
   .table-head {
-    margin-right: 1.2rem;
     background-color: $Grey-50;
     border: 1px solid $Primary-50;
     border-top-left-radius: 10px;
@@ -167,7 +167,6 @@ header {
   .table-data {
     border: 1px solid $Primary-50;
     padding: 1rem 0 1rem 1.5rem;
-    margin-right: 1.2rem;
     span {
       @include inter-regular($font-size: 14px);
       color: $Grey-600;
@@ -185,22 +184,24 @@ header {
       width: 1rem;
     }
 
+    .status-container {
+      display: inline-block;
+      width: 9.5rem;
+    }
+
     .status {
       padding: 2px 8px;
       border-radius: 16px;
-      margin-right: 4rem;
     }
 
     .Clean {
       background-color: $Primary-50;
       color: $Primary-400;
-      margin-right: 5.8rem;
     }
 
     .Dirty {
       background-color: $Error-50;
       color: $Error-400;
-      margin-right: 6.2rem;
     }
 
     .Inspected {
@@ -211,7 +212,6 @@ header {
     .PickUp {
       background-color: $Warning-50;
       color: $Warning-400;
-      margin-right: 5.2rem;
     }
   }
 }

@@ -1,7 +1,7 @@
 import type {
   ButtonValue,
   SecondaryBtnType,
-  dealTableDataType,
+  DealTableDataType,
 } from "../types/data";
 
 const buttonValue: ButtonValue = {
@@ -28,7 +28,7 @@ const tableTitle: string[] = [
   "Room type",
   "Status",
 ];
-const tableData: dealTableDataType[] = [
+const tableData: DealTableDataType[] = [
   {
     referenceNumber: 5644,
     dealName: "Family deal",

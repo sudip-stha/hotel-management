@@ -2,7 +2,7 @@ import type {
   ButtonValue,
   Input,
   SecondaryBtnType,
-  guestTableDataType,
+  GuestTableDataType,
 } from "../types/data";
 
 const btn3: SecondaryBtnType = {
@@ -40,7 +40,7 @@ const tableTitle: string[] = [
   "Amount paid",
   "Status",
 ];
-const tableData: guestTableDataType[] = [
+const tableData: GuestTableDataType[] = [
   {
     reservationId: 5644,
     name: "Alexander",
