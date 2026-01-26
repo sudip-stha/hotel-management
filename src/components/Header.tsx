@@ -1,5 +1,5 @@
-import { header, input } from "../../data/header";
-import Input from "../input/Input";
+import { header, input } from "../data/header";
+import Input from "./ui/input/Input";
 
 const Header = () => {
   return (

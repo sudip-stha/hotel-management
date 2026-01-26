@@ -1,10 +1,10 @@
 import { roomData } from "../../data/room";
-import Heading from "./Heading";
-import PrimaryButton from "../buttons/PrimaryButton";
-import AddButton from "../buttons/AddButton";
+import Heading from "../ui/Heading";
+import PrimaryButton from "../ui/buttons/PrimaryButton";
+import AddButton from "../ui/buttons/AddButton";
 import RoomTableHead from "../table/RoomTableHead";
-import Button from "../buttons/Button";
-import SecondaryButton from "../buttons/SecondaryButton";
+import Button from "../ui/buttons/Button";
+import SecondaryButton from "../ui/buttons/SecondaryButton";
 import type { NumberListType } from "../../types/data";
 import RoomTableData from "../table/RoomTableData";
 

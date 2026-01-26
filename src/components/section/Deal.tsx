@@ -1,8 +1,8 @@
-import Heading from "./Heading";
+import Heading from "../ui/Heading";
 import { dealData } from "../../data/deal";
-import Button from "../buttons/Button";
-import PrimaryButton from "../buttons/PrimaryButton";
-import AddButton from "../buttons/AddButton";
+import Button from "../ui/buttons/Button";
+import PrimaryButton from "../ui/buttons/PrimaryButton";
+import AddButton from "../ui/buttons/AddButton";
 import TableHead from "../table/TableHead";
 import DealTableData from "../table/DealTableData";
 

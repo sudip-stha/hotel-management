@@ -1,4 +1,4 @@
-import Header from "../components/main/Header";
+import Header from "../components/Header";
 
 //Aside type checking
 export interface Aside {
@@ -48,7 +48,7 @@ export interface SecondaryBtnTypeWrap {
 }
 
 export interface StringType {
-  value: string|undefined;
+  value?: string;
 }
 
 export interface NumberListType {
@@ -98,4 +98,18 @@ export interface RoomTableDataType {
 
 export interface RoomTableDataTypeList {
   data: RoomTableDataType[];
+}
+
+export interface RateTableDataType {
+  roomType: string;
+  deals: string;
+  cancellationPolicy: string;
+  dealPrice: number;
+  rate: number;
+  availability: string;
+  dotIcon: string;
+}
+
+export interface RateTableDataTypeList {
+  data: RateTableDataType[];
 }

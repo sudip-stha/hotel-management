@@ -1,12 +1,14 @@
-import { guestData } from "../../data/guest";
-import type { NumberListType } from "../../types/data";
-import PrimaryButton from "../buttons/PrimaryButton";
-import Button from "../buttons/Button";
-import Input from "../input/Input";
+import { guestData } from "../../data/guest.ts";
+import type { NumberListType } from "../../types/data.ts";
+import PrimaryButton from "../ui/buttons/PrimaryButton.tsx";
+import Button from "../ui/buttons/Button.tsx";
+import Input from "../ui/input/Input.tsx";
 import GuestTableData from "../table/GuestTableData.js";
 import TableHead from "../table/TableHead.js";
-import SecondaryButton from "../buttons/SecondaryButton.js";
-import Heading from "./Heading.tsx";
+import SecondaryButton from "../ui/buttons/SecondaryButton.js";
+import Heading from "../ui/Heading.tsx";
+import { AppRoutes } from "../../data/routes.ts";
+import { Link } from "react-router-dom";
 
 const PaginationList = ({ item }: NumberListType) => {
   return (
@@ -43,6 +45,8 @@ const Guest = () => {
         <PaginationList item={guestData.Pagination} />
         <SecondaryButton value={guestData.btn4} />
       </div>
+
+      <Link to={AppRoutes.dashboard}></Link>
     </div>
   );
 };

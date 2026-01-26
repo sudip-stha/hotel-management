@@ -95,7 +95,7 @@ const tableData: RoomTableDataType[] = [
     bedType: "Single bed",
     roomFloor: "Floor -5",
     roomFacility: "AC, shower, Double bed, towel bathtub, TV",
-    status: "Booked",
+    status: "Blocked",
     dotIcon: "/images/threeDot.svg",
   },
 ];

@@ -2,40 +2,41 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Guest from "./components/main/Guest.tsx";
-import Deal from "./components/main/Deal.tsx";
-import Room from "./components/main/Room.tsx";
-import Rate from "./components/main/Rate.tsx";
-import FrontDesk from "./components/main/FrontDesk.tsx";
-import Dashboard from "./components/main/Dashboard.tsx";
+import Guest from "./components/section/Guest.tsx";
+import Deal from "./components/section/Deal.tsx";
+import Room from "./components/section/Room.tsx";
+import Rate from "./components/section/Rate.tsx";
+import FrontDesk from "./components/section/FrontDesk.tsx";
+import Dashboard from "./components/section/Dashboard.tsx";
+import { AppRoutes } from "./data/routes.ts";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: AppRoutes.home,
     element: <App />,
     children: [
       {
-        path: "/dashboard",
+        path: AppRoutes.dashboard,
         element: <Dashboard />,
       },
       {
-        path: "/guest",
+        path: AppRoutes.guest,
         element: <Guest />,
       },
       {
-        path: "/deal",
+        path: AppRoutes.deal,
         element: <Deal />,
       },
       {
-        path: "/room",
+        path: AppRoutes.room,
         element: <Room />,
       },
       {
-        path: "/rate",
+        path: AppRoutes.rate,
         element: <Rate />,
       },
       {
-        path: "/front-desk",
+        path: AppRoutes.forntDesk,
         element: <FrontDesk />,
       },
     ],

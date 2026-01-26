@@ -7,12 +7,10 @@ const DealTableData = ({ data }: DealTableDataTypeList) => {
         let statusClass = "Clean";
         if (value.status === "Ongoing") {
           statusClass = "Clean";
-        } else if (value.status === "Full") {
+        } else if (value.status === "Full" || value.status === "Inactive") {
           statusClass = "Dirty";
         } else if (value.status === "New") {
           statusClass = "Inspected";
-        } else if (value.status === "Inactive") {
-          statusClass = "Dirty";
         }
         return (
           <div className="table-data" key={value.referenceNumber}>
