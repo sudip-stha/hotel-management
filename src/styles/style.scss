@@ -24,6 +24,12 @@
   border-radius: 100px;
 }
 
+.add-btn{
+  background-color: $Primary-500;
+  color: white;
+  border: none;
+}
+
 .input-wrap {
   position: relative;
   img {
@@ -79,7 +85,7 @@ aside {
   color: $Primary-600;
   background-color: $Primary-50;
   border-radius: 8px;
-  .icon-img path{
+  .icon-img {
     fill: $Primary-600;
   }
 }
@@ -128,7 +134,6 @@ header {
 .guest-btns-container {
   display: flex;
   margin: 0.7rem 1.25rem 0 0;
-
   .guest-btns {
     display: flex;
     gap: 12px;

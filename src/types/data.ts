@@ -39,7 +39,7 @@ export interface ButtonValue {
 
 export interface SecondaryBtnType {
   title: string;
-  icon: string;
+  icon?: string;
 }
 
 export interface SecondaryBtnTypeWrap {
@@ -58,7 +58,7 @@ export interface StringListType {
   item: string[];
 }
 
-export interface tableDataType {
+export interface guestTableDataType {
   reservationId: number;
   name: string;
   roomNumber: string;
@@ -69,5 +69,15 @@ export interface tableDataType {
 }
 
 export interface tableDataTypeList {
-  data: tableDataType[];
+  data: guestTableDataType[];
+}
+
+export interface dealTableDataType {
+  referenceNumber: number;
+  dealName: string;
+  reservationLeft: number;
+  endDate: string;
+  roomType: string;
+  status: string;
+  dotIcon: string;
 }
