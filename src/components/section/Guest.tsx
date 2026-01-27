@@ -7,8 +7,7 @@ import GuestTableData from "../table/GuestTableData.js";
 import TableHead from "../table/TableHead.js";
 import SecondaryButton from "../ui/buttons/SecondaryButton.js";
 import Heading from "../ui/Heading.tsx";
-import { AppRoutes } from "../../data/routes.ts";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const PaginationList = ({ item }: NumberListType) => {
   return (
@@ -21,6 +20,17 @@ const PaginationList = ({ item }: NumberListType) => {
 };
 
 const Guest = () => {
+  const [inputRoomNumber, setInputRoomNumber] = useState("");
+
+  function getInput(data: string): void {
+    setInputRoomNumber(data);
+  }
+  const searchingValue = guestData.tableData.filter((value) => {
+    return value.roomNumber
+      .toLowerCase()
+      .includes(inputRoomNumber.toLowerCase().trim());
+  });
+
   return (
     <div className="container">
       <Heading value={guestData.title} />
@@ -31,13 +41,19 @@ const Guest = () => {
         </div>
         <div className="left-side-btns right-side-btn">
           <Button value={guestData.btn3} />
-          <Input value={guestData.input} />
+          <Input
+            value={{
+              searchIcon: guestData.input.searchIcon,
+              placeholder: guestData.input.placeholder,
+            }}
+            getInput={getInput}
+          />
         </div>
       </div>
 
       <div className="table-container">
         <TableHead item={guestData.tableTitle} />
-        <GuestTableData data={guestData.tableData} />
+        <GuestTableData data={searchingValue} />
       </div>
 
       <div className="guest-bottom-btns">
@@ -45,8 +61,6 @@ const Guest = () => {
         <PaginationList item={guestData.Pagination} />
         <SecondaryButton value={guestData.btn4} />
       </div>
-
-      <Link to={AppRoutes.dashboard}></Link>
     </div>
   );
 };

@@ -42,6 +42,7 @@ const tableTitle: string[] = [
 ];
 const tableData: GuestTableDataType[] = [
   {
+    id:1,
     reservationId: 5644,
     name: "Alexander",
     roomNumber: "A647",
@@ -51,6 +52,7 @@ const tableData: GuestTableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
+    id:2,
     reservationId: 6112,
     name: "Pegasus",
     roomNumber: "A456",
@@ -60,6 +62,7 @@ const tableData: GuestTableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
+    id:3,
     reservationId: 6141,
     name: "Martin",
     roomNumber: "A645",
@@ -69,6 +72,7 @@ const tableData: GuestTableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
+    id:4,
     reservationId: 6535,
     name: "Cecil",
     roomNumber: "A684",
@@ -78,6 +82,7 @@ const tableData: GuestTableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
+    id:5,
     reservationId: 6541,
     name: "Luke",
     roomNumber: "B464",
@@ -87,6 +92,7 @@ const tableData: GuestTableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
+    id:6,
     reservationId: 9846,
     name: "Yadrin",
     roomNumber: "C648",
@@ -96,6 +102,7 @@ const tableData: GuestTableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
+    id:7,
     reservationId: 4921,
     name: "Kiand",
     roomNumber: "D644",
@@ -105,6 +112,7 @@ const tableData: GuestTableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
+    id:8,
     reservationId: 4921,
     name: "Kiand",
     roomNumber: "D644",
@@ -114,6 +122,7 @@ const tableData: GuestTableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
+    id:9,
     reservationId: 9841,
     name: "Turen",
     roomNumber: "B641",
@@ -123,6 +132,7 @@ const tableData: GuestTableDataType[] = [
     dotIcon: "/images/threeDot.svg",
   },
   {
+    id:10,
     reservationId: 9841,
     name: "Turen",
     roomNumber: "B641",

@@ -1,5 +1,5 @@
-import NavList from "./NavList";
-import asideData from "../data/aside";
+import NavList from "../ui/NavList";
+import asideData from "../../data/aside";
 
 const Aside = () => {
   return (

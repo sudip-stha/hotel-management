@@ -24,6 +24,7 @@ export interface Input {
 
 export interface InputAll {
   value: Input;
+  getInput: (data: string) => void;
 }
 
 export interface Header {
@@ -60,6 +61,7 @@ export interface StringListType {
 }
 
 export interface GuestTableDataType {
+  id: number;
   reservationId: number;
   name: string;
   roomNumber: string;

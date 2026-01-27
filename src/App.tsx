@@ -1,5 +1,5 @@
 import "./styles/style.scss";
-import Aside from "./components/Aside";
+import Aside from "./components/aside/Aside";
 import Main from "./components/main/Main";
 
 function App() {

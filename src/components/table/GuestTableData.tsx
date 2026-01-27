@@ -15,7 +15,7 @@ const GuestTableData = ({ data }: GuestTableDataTypeList) => {
           statusClass = "PickUp";
         }
         return (
-          <div className="table-data" key={value.reservationId}>
+          <div className="table-data" key={value.id}>
             <span className="id-col">#{value.reservationId}</span>
             <span>{value.name}</span>
             <span>{value.roomNumber}</span>

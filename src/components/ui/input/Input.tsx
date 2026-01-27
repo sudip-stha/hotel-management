@@ -1,10 +1,14 @@
-import type { InputAll } from "../../types/data";
+import type {  InputAll } from "../../../types/data";
 
-const Input = ({ value }: InputAll) => {
+const Input = ({ getInput, value }: InputAll) => {
   return (
     <div className="input-wrap">
       <img src={value.searchIcon} alt="This is a search icon." />
-      <input type="text" placeholder={value.placeholder} />
+      <input
+        type="text"
+        placeholder={value.placeholder}
+        onChange={(e) => getInput(e.target.value)}
+      />
     </div>
   );
 };
