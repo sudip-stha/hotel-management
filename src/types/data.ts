@@ -36,7 +36,13 @@ export interface Header {
 export interface ButtonValue {
   btn1: string;
   btn2: string;
-  btn3?: string;
+  btn3: string;
+}
+
+export interface ButtonAction {
+  action: string;
+  onClick: (action: string) => void;
+  disabled?: boolean;
 }
 
 export interface SecondaryBtnType {
@@ -46,6 +52,19 @@ export interface SecondaryBtnType {
 
 export interface SecondaryBtnTypeWrap {
   value: SecondaryBtnType;
+  btnAction: ButtonAction;
+}
+
+export interface PrimaryBtnType {
+  value: string;
+  isActive?: boolean;
+  onClick?: () => void;
+}
+
+export interface PaginationListType {
+  totalPages: number;
+  hanldePagination: (pageNumber: number) => void;
+  currentPage: number;
 }
 
 export interface StringType {
@@ -68,6 +87,7 @@ export interface GuestTableDataType {
   totalAmt: number;
   amtPaid: number;
   status: string;
+  checkIn: boolean;
   dotIcon: string;
 }
 

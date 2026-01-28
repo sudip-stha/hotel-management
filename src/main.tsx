@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Guest from "./components/section/Guest.tsx";
+import Guest from "./components/section/guest/Guest.tsx";
 import Deal from "./components/section/Deal.tsx";
 import Room from "./components/section/Room.tsx";
 import Rate from "./components/section/Rate.tsx";

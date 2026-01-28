@@ -1,0 +1,108 @@
+import { guestData } from "../../../data/guest.ts";
+import PrimaryButton from "../../ui/buttons/PrimaryButton.tsx";
+import Button from "../../ui/buttons/Button.tsx";
+import Input from "../../ui/input/Input.tsx";
+import GuestTableData from "../../table/GuestTableData.js";
+import TableHead from "../../table/TableHead.js";
+import Heading from "../../ui/Heading.tsx";
+import { useEffect, useState } from "react";
+import PaginationList from "./PaginationList.tsx";
+
+const Guest = () => {
+  let actualTableData = guestData.tableData;
+  //For Searching
+  const [inputRoomNumber, setInputRoomNumber] = useState("");
+
+  function getInput(data: string): void {
+    setInputRoomNumber(data);
+  }
+  actualTableData = actualTableData.filter((value) => {
+    return value.roomNumber
+      .toLowerCase()
+      .includes(inputRoomNumber.toLowerCase().trim());
+  });
+
+  //Check filter
+  const [activeFilter, setActiveFilter] = useState("");
+
+  if (activeFilter === guestData.buttonValue.btn1) {
+    actualTableData = actualTableData.filter((row) => row.checkIn === true);
+  } else if (activeFilter === guestData.buttonValue.btn2) {
+    actualTableData = guestData.tableData.filter(
+      (row) => row.checkIn === false,
+    );
+  }
+
+  //For pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  const totalPages = Math.ceil(actualTableData.length / itemsPerPage);
+  const endIndex = currentPage * itemsPerPage;
+  const startIndex = endIndex - itemsPerPage;
+
+  function hanldePagination(pageNumber: number) {
+    setCurrentPage(pageNumber);
+  }
+
+  useEffect(() => {
+    if (currentPage !== 1) {
+      setCurrentPage(1);
+    }
+  }, [inputRoomNumber]);
+
+  //final render data (10 data per page)
+  const currentList = actualTableData.slice(startIndex, endIndex);
+
+  return (
+    <div className="container">
+      <Heading value={guestData.title} />
+      <div className="btns-container">
+        <div className="left-side-btns">
+          <PrimaryButton
+            value={guestData.buttonValue.btn1}
+            isActive={activeFilter === guestData.buttonValue.btn1}
+            onClick={() => setActiveFilter(guestData.buttonValue.btn1)}
+          />
+          <PrimaryButton
+            value={guestData.buttonValue.btn2}
+            isActive={activeFilter === guestData.buttonValue.btn2}
+            onClick={() => setActiveFilter(guestData.buttonValue.btn2)}
+          />
+        </div>
+        <div className="left-side-btns right-side-btn">
+          <Button
+            value={guestData.btn3}
+            btnAction={{
+              action: guestData.btn3,
+              onClick(action) {},
+              disabled: false,
+            }}
+          />
+          <Input
+            value={{
+              searchIcon: guestData.input.searchIcon,
+              placeholder: guestData.input.placeholder,
+            }}
+            getInput={getInput}
+          />
+        </div>
+      </div>
+
+      <div className="table-container">
+        <TableHead item={guestData.tableTitle} />
+        <GuestTableData data={currentList} />
+      </div>
+
+      <div className="guest-bottom-btns">
+        <PaginationList
+          totalPages={totalPages}
+          hanldePagination={hanldePagination}
+          currentPage={currentPage}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Guest;

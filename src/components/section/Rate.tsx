@@ -12,7 +12,14 @@ const Rate = () => {
       <div className="btns-container">
         <div className="left-side-btns right-side-btn">
           <AddButton value={rateData.btn1} />
-          <Button value={rateData.btn2} />
+          <Button
+            value={rateData.btn2}
+            btnAction={{
+              action: "",
+              onClick: () => {},
+              disabled: false,
+            }}
+          />
         </div>
       </div>
 

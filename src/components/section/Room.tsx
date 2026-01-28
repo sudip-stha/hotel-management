@@ -3,20 +3,10 @@ import Heading from "../ui/Heading";
 import PrimaryButton from "../ui/buttons/PrimaryButton";
 import AddButton from "../ui/buttons/AddButton";
 import RoomTableHead from "../table/RoomTableHead";
-import Button from "../ui/buttons/Button";
-import SecondaryButton from "../ui/buttons/SecondaryButton";
-import type { NumberListType } from "../../types/data";
 import RoomTableData from "../table/RoomTableData";
+import PaginationList from "./guest/PaginationList";
 
-const PaginationList = ({ item }: NumberListType) => {
-  return (
-    <ul className="page-col">
-      {item.map((data) => {
-        return <li key={data}>{data}</li>;
-      })}
-    </ul>
-  );
-};
+function hanldePagination() {}
 
 const Room = () => {
   return (
@@ -38,9 +28,27 @@ const Room = () => {
       </div>
 
       <div className="guest-bottom-btns">
-        <Button value={roomData.btn6} />
-        <PaginationList item={roomData.Pagination} />
-        <SecondaryButton value={roomData.btn5} />
+        {/* <Button
+          value={roomData.btn6}
+          btnAction={{
+            action: "",
+            onClick: () => {},
+            disabled: false,
+          }}
+        /> */}
+        <PaginationList
+          totalPages={7}
+          hanldePagination={hanldePagination}
+          currentPage={1}
+        />
+        {/* <SecondaryButton
+          value={roomData.btn5}
+          btnAction={{
+            action: "",
+            onClick: () => {},
+            disabled: false,
+          }}
+        /> */}
       </div>
     </div>
   );

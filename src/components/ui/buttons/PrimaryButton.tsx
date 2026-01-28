@@ -1,7 +1,16 @@
-import type { StringType } from "../../types/data";
+import type { PrimaryBtnType } from "../../../types/data";
 
-const PrimaryButton = ({ value }: StringType) => {
-  return <button className="btn primary-btn">{value}</button>;
+const PrimaryButton = ({ value, isActive, onClick }: PrimaryBtnType) => {
+  return (
+    <>
+      <button
+        onClick={onClick}
+        className={`btn primary-btn ${isActive ? "active-btn" : ""}`}
+      >
+        {value}
+      </button>
+    </>
+  );
 };
 
 export default PrimaryButton;

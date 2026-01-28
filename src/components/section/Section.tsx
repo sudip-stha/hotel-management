@@ -1,4 +1,4 @@
-import Guest from "../section/Guest";
+import Guest from "./guest/Guest";
 import Deal from "../section/Deal";
 import { Route, Routes } from "react-router-dom";
 import FrontDesk from "../section/FrontDesk";

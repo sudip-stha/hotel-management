@@ -17,7 +17,14 @@ const Deal = () => {
         </div>
         <div className="left-side-btns right-side-btn">
           <AddButton value={dealData.btn4} />
-          <Button value={dealData.btn3} />
+          <Button
+            value={dealData.btn3}
+            btnAction={{
+              action: "",
+              onClick: () => {},
+              disabled: false,
+            }}
+          />
         </div>
       </div>
       <div className="table-container">
