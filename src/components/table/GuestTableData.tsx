@@ -1,5 +1,9 @@
 import type { GuestTableDataTypeList } from "../../types/data";
 
+function handleData(id: number) {
+  console.log(id);
+}
+
 const GuestTableData = ({ data }: GuestTableDataTypeList) => {
   return (
     <>
@@ -24,7 +28,10 @@ const GuestTableData = ({ data }: GuestTableDataTypeList) => {
             <div className="status-container">
               <span className={`status ${statusClass}`}>{value.status}</span>
             </div>
-            <span className="three-dot-col">
+            <span
+              className="three-dot-col"
+              onClick={() => handleData(value.id)}
+            >
               <img src={value.dotIcon} alt="This is a dot icon." />
             </span>
           </div>

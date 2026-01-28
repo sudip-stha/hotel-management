@@ -36,7 +36,7 @@ export interface Header {
 export interface ButtonValue {
   btn1: string;
   btn2: string;
-  btn3: string;
+  btn3?: string;
 }
 
 export interface ButtonAction {
@@ -59,6 +59,11 @@ export interface PrimaryBtnType {
   value: string;
   isActive?: boolean;
   onClick?: () => void;
+}
+
+export interface FilterButtonType {
+  value: SecondaryBtnType;
+  handleFilterChange: () => void;
 }
 
 export interface PaginationListType {

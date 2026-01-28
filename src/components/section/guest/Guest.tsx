@@ -1,15 +1,16 @@
 import { guestData } from "../../../data/guest.ts";
 import PrimaryButton from "../../ui/buttons/PrimaryButton.tsx";
-import Button from "../../ui/buttons/Button.tsx";
 import Input from "../../ui/input/Input.tsx";
 import GuestTableData from "../../table/GuestTableData.js";
 import TableHead from "../../table/TableHead.js";
 import Heading from "../../ui/Heading.tsx";
 import { useEffect, useState } from "react";
 import PaginationList from "./PaginationList.tsx";
+import FilterButton from "../../ui/buttons/FilterButton.tsx";
 
 const Guest = () => {
   let actualTableData = guestData.tableData;
+
   //For Searching
   const [inputRoomNumber, setInputRoomNumber] = useState("");
 
@@ -22,7 +23,7 @@ const Guest = () => {
       .includes(inputRoomNumber.toLowerCase().trim());
   });
 
-  //Check filter
+  //Check check in or check out filter
   const [activeFilter, setActiveFilter] = useState("");
 
   if (activeFilter === guestData.buttonValue.btn1) {
@@ -30,6 +31,17 @@ const Guest = () => {
   } else if (activeFilter === guestData.buttonValue.btn2) {
     actualTableData = guestData.tableData.filter(
       (row) => row.checkIn === false,
+    );
+  }
+
+  //filter the data
+  const [filterData, setFilterData] = useState("");
+  function handleFilterChange(e) {
+    setFilterData(e.target.value);
+  }
+  if (filterData) {
+    actualTableData = actualTableData.filter((row) =>
+      row.status.includes(filterData),
     );
   }
 
@@ -71,13 +83,9 @@ const Guest = () => {
           />
         </div>
         <div className="left-side-btns right-side-btn">
-          <Button
+          <FilterButton
             value={guestData.btn3}
-            btnAction={{
-              action: guestData.btn3,
-              onClick(action) {},
-              disabled: false,
-            }}
+            handleFilterChange={handleFilterChange}
           />
           <Input
             value={{

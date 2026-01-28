@@ -16,7 +16,7 @@ const Room = () => {
         <div className="left-side-btns">
           <PrimaryButton value={roomData.buttonValue.btn1} />
           <PrimaryButton value={roomData.buttonValue.btn2} />
-          <PrimaryButton value={roomData.buttonValue.btn3} />
+          <PrimaryButton value={roomData.buttonValue.btn3!} />
         </div>
         <div className="left-side-btns right-side-btn">
           <AddButton value={roomData.btn4} />

@@ -192,6 +192,7 @@ header {
     }
     .three-dot-col {
       width: 1rem;
+      cursor: pointer;
     }
 
     .status-container {
@@ -261,3 +262,5 @@ header {
 .disableActive {
   opacity: 0.5;
 }
+
+
