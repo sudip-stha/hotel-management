@@ -99,7 +99,7 @@ export interface GuestTableDataType {
   roomType: string;
   stay: string;
   discount: number;
-  guestPP:string;
+  guestPP: string;
 }
 
 export interface GuestTableDataTypeList {
@@ -148,11 +148,16 @@ export interface RateTableDataTypeList {
   data: RateTableDataType[];
 }
 
-export interface guestIndividualType {
+export interface guestIndividualTitleType {
   guestName: string;
   registrationNumber: string;
   checkInDate: string;
   roomType: string;
   stay: string;
   discount: string;
+}
+
+export interface guestIndividualType {
+  guest: GuestTableDataType;
+  onClose: () => void;
 }

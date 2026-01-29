@@ -269,8 +269,8 @@ header {
 
 .overlay-card {
   position: fixed;
-  right: 10rem;
   z-index: 2;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;

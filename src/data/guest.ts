@@ -3,7 +3,7 @@ import type {
   Input,
   SecondaryBtnType,
   GuestTableDataType,
-  guestIndividualType,
+  guestIndividualTitleType,
 } from "../types/data";
 
 const btn3: SecondaryBtnType = {
@@ -1235,10 +1235,10 @@ const tableData: GuestTableDataType[] = [
   },
 ];
 
-const guestIndividual: guestIndividualType = {
+const guestIndividual: guestIndividualTitleType = {
   guestName: "Guest Name",
   registrationNumber: "Registration number",
-  checkInDate: "18/12/23",
+  checkInDate: "Check in date",
   roomType: "Room Type",
   stay: "Stay",
   discount: "discount",

@@ -82,10 +82,10 @@ const Guest = () => {
     <div className="container">
       {isModalOpen && (
         <div className="overlay-card">
-        <GuestIndividual
-          guest={selectedGuest}
-          onClose={() => setIsModalOpen(false)}
-        />
+          <GuestIndividual
+            guest={selectedGuest!}
+            onClose={() => setIsModalOpen(false)}
+          />
         </div>
       )}
 

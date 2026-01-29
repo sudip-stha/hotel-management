@@ -1,7 +1,8 @@
 import { guestData } from "../../../data/guest";
 import Heading from "../../ui/Heading";
+import type { guestIndividualType } from "../../../types/data";
 
-const GuestIndividual = ({ guest, onClose }) => {
+const GuestIndividual = ({ guest, onClose }: guestIndividualType) => {
   return (
     <div className="individual-guest-card">
       <img src={guest.guestPP} alt="" />
@@ -12,7 +13,7 @@ const GuestIndividual = ({ guest, onClose }) => {
 
       <div className="individual-guest-info">
         <Heading value={guestData.guestIndividual.registrationNumber} />
-        <input type="text" placeholder={guest.registrationNumber} />
+        <input type="text" placeholder={`${guest.registrationNumber}`} />
       </div>
 
       <div className="individual-guest-info">
@@ -32,10 +33,12 @@ const GuestIndividual = ({ guest, onClose }) => {
 
       <div className="individual-guest-info">
         <Heading value={guestData.guestIndividual.discount} />
-        <input type="text" placeholder={guest.discount} />
+        <input type="text" placeholder={`${guest.discount}`} />
       </div>
-      
-      <button onClick={onClose}>cancel</button>
+
+      <button className="btn" onClick={onClose}>
+        cancel
+      </button>
     </div>
   );
 };
