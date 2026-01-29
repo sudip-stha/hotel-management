@@ -1,3 +1,4 @@
+import type { ChangeEvent } from "react";
 import Header from "../components/Header";
 
 //Aside type checking
@@ -52,7 +53,7 @@ export interface SecondaryBtnType {
 
 export interface SecondaryBtnTypeWrap {
   value: SecondaryBtnType;
-  btnAction: ButtonAction;
+  btnAction?: ButtonAction;
 }
 
 export interface PrimaryBtnType {
@@ -63,7 +64,7 @@ export interface PrimaryBtnType {
 
 export interface FilterButtonType {
   value: SecondaryBtnType;
-  handleFilterChange: () => void;
+  handleFilterChange: (event: ChangeEvent<HTMLSelectElement>) => void;
 }
 
 export interface PaginationListType {
@@ -160,4 +161,13 @@ export interface guestIndividualTitleType {
 export interface guestIndividualType {
   guest: GuestTableDataType;
   onClose: () => void;
+}
+
+export interface GuestFormTitleType {
+  reservationId: string;
+  name: string;
+  roomNumber: string;
+  totalAmt: string;
+  amtPaid: string;
+  status: string;
 }

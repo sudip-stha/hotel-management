@@ -4,20 +4,29 @@ import Input from "../../ui/input/Input.tsx";
 import GuestTableData from "../../table/GuestTableData.js";
 import TableHead from "../../table/TableHead.js";
 import Heading from "../../ui/Heading.tsx";
-import { useEffect, useState } from "react";
+import { useState, type ChangeEvent } from "react";
 import PaginationList from "./PaginationList.tsx";
 import FilterButton from "../../ui/buttons/FilterButton.tsx";
 import GuestIndividual from "./GuestIndividual.tsx";
 import type { GuestTableDataType } from "../../../types/data.ts";
+import AddButton from "../../ui/buttons/AddButton.tsx";
 
 const Guest = () => {
   let actualTableData = guestData.tableData;
+  const [activeFilter, setActiveFilter] = useState("");
+  const [filterData, setFilterData] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedGuest, setSelectedGuest] = useState<GuestTableDataType | null>(
+    null,
+  );
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   //For Searching
   const [inputRoomNumber, setInputRoomNumber] = useState("");
 
   function getInput(data: string): void {
     setInputRoomNumber(data);
+    setCurrentPage(1);
   }
   actualTableData = actualTableData.filter((value) => {
     return value.roomNumber
@@ -26,7 +35,6 @@ const Guest = () => {
   });
 
   //Check check in or check out filter
-  const [activeFilter, setActiveFilter] = useState("");
 
   if (activeFilter === guestData.buttonValue.btn1) {
     actualTableData = actualTableData.filter((row) => row.checkIn === true);
@@ -35,11 +43,11 @@ const Guest = () => {
   }
 
   //filter the data
-  const [filterData, setFilterData] = useState("");
 
-  function handleFilterChange(e) {
+  function handleFilterChange(e: ChangeEvent<HTMLSelectElement>) {
     setFilterData(e.target.value);
   }
+
   if (filterData) {
     actualTableData = actualTableData.filter((row) =>
       row.status.includes(filterData),
@@ -47,7 +55,7 @@ const Guest = () => {
   }
 
   //For pagination
-  const [currentPage, setCurrentPage] = useState(1);
+
   const itemsPerPage = 10;
 
   const totalPages = Math.ceil(actualTableData.length / itemsPerPage);
@@ -58,20 +66,10 @@ const Guest = () => {
     setCurrentPage(pageNumber);
   }
 
-  useEffect(() => {
-    if (currentPage !== 1) {
-      setCurrentPage(1);
-    }
-  }, [inputRoomNumber]);
-
   //final render data (10 data per page)
   const currentList = actualTableData.slice(startIndex, endIndex);
 
   //individual guest popup
-  const [selectedGuest, setSelectedGuest] = useState<GuestTableDataType | null>(
-    null,
-  );
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   function handleIndividualData(guest: GuestTableDataType) {
     setSelectedGuest(guest);
@@ -103,7 +101,9 @@ const Guest = () => {
             onClick={() => setActiveFilter(guestData.buttonValue.btn2)}
           />
         </div>
+
         <div className="left-side-btns right-side-btn">
+          <AddButton value={guestData.btn6} />
           <FilterButton
             value={guestData.btn3}
             handleFilterChange={handleFilterChange}

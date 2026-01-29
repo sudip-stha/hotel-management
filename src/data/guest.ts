@@ -4,6 +4,7 @@ import type {
   SecondaryBtnType,
   GuestTableDataType,
   guestIndividualTitleType,
+  GuestFormTitleType,
 } from "../types/data";
 
 const btn3: SecondaryBtnType = {
@@ -19,6 +20,10 @@ const btn4: SecondaryBtnType = {
 const btn5: SecondaryBtnType = {
   title: "Previous",
   icon: "/images/leftArrow.svg",
+};
+
+const btn6: SecondaryBtnType = {
+  title: "Add guest",
 };
 
 const buttonValue: ButtonValue = {
@@ -1244,6 +1249,15 @@ const guestIndividual: guestIndividualTitleType = {
   discount: "discount",
 };
 
+const guestFormTitle:GuestFormTitleType = {
+  reservationId: "Reservation ID",
+  name: "Name",
+  roomNumber: "Room Number",
+  totalAmt: "Total amount",
+  amtPaid: "Amount paid",
+  status: "Status",
+};
+
 export const guestData = {
   title,
   tableTitle,
@@ -1251,7 +1265,9 @@ export const guestData = {
   btn3,
   btn4,
   btn5,
+  btn6,
   buttonValue,
   input,
   guestIndividual,
+  guestFormTitle,
 };
