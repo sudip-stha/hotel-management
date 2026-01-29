@@ -8,7 +8,7 @@ const PaginationList = ({
   hanldePagination,
   currentPage,
 }: PaginationListType) => {
-  const page = [];
+  const page: number[] = [];
   let nextDisable = false;
   let prevDisable = false;
 
@@ -18,11 +18,14 @@ const PaginationList = ({
   if (currentPage === 1) {
     prevDisable = true;
   }
+
   for (let i = 1; i <= totalPages; i++) {
     page.push(i);
   }
   return (
-    <div className="guest-bottom-btns">
+    <div
+      className={`guest-bottom-btns ${totalPages === 1 ? "hide-pagination" : " "}`}
+    >
       <Button
         value={guestData.btn5}
         btnAction={{

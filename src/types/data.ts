@@ -94,10 +94,17 @@ export interface GuestTableDataType {
   status: string;
   checkIn: boolean;
   dotIcon: string;
+  registrationNumber: number;
+  checkInDate: string;
+  roomType: string;
+  stay: string;
+  discount: number;
+  guestPP:string;
 }
 
 export interface GuestTableDataTypeList {
   data: GuestTableDataType[];
+  handleIndividualData: (item: GuestTableDataType) => void;
 }
 
 export interface DealTableDataType {
@@ -139,4 +146,13 @@ export interface RateTableDataType {
 
 export interface RateTableDataTypeList {
   data: RateTableDataType[];
+}
+
+export interface guestIndividualType {
+  guestName: string;
+  registrationNumber: string;
+  checkInDate: string;
+  roomType: string;
+  stay: string;
+  discount: string;
 }

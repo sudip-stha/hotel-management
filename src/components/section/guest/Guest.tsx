@@ -7,6 +7,8 @@ import Heading from "../../ui/Heading.tsx";
 import { useEffect, useState } from "react";
 import PaginationList from "./PaginationList.tsx";
 import FilterButton from "../../ui/buttons/FilterButton.tsx";
+import GuestIndividual from "./GuestIndividual.tsx";
+import type { GuestTableDataType } from "../../../types/data.ts";
 
 const Guest = () => {
   let actualTableData = guestData.tableData;
@@ -29,13 +31,12 @@ const Guest = () => {
   if (activeFilter === guestData.buttonValue.btn1) {
     actualTableData = actualTableData.filter((row) => row.checkIn === true);
   } else if (activeFilter === guestData.buttonValue.btn2) {
-    actualTableData = guestData.tableData.filter(
-      (row) => row.checkIn === false,
-    );
+    actualTableData = actualTableData.filter((row) => row.checkIn === false);
   }
 
   //filter the data
   const [filterData, setFilterData] = useState("");
+
   function handleFilterChange(e) {
     setFilterData(e.target.value);
   }
@@ -66,8 +67,28 @@ const Guest = () => {
   //final render data (10 data per page)
   const currentList = actualTableData.slice(startIndex, endIndex);
 
+  //individual guest popup
+  const [selectedGuest, setSelectedGuest] = useState<GuestTableDataType | null>(
+    null,
+  );
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function handleIndividualData(guest: GuestTableDataType) {
+    setSelectedGuest(guest);
+    setIsModalOpen(true);
+  }
+
   return (
     <div className="container">
+      {isModalOpen && (
+        <div className="overlay-card">
+        <GuestIndividual
+          guest={selectedGuest}
+          onClose={() => setIsModalOpen(false)}
+        />
+        </div>
+      )}
+
       <Heading value={guestData.title} />
       <div className="btns-container">
         <div className="left-side-btns">
@@ -99,7 +120,10 @@ const Guest = () => {
 
       <div className="table-container">
         <TableHead item={guestData.tableTitle} />
-        <GuestTableData data={currentList} />
+        <GuestTableData
+          data={currentList}
+          handleIndividualData={handleIndividualData}
+        />
       </div>
 
       <div className="guest-bottom-btns">

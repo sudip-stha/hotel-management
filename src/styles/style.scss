@@ -259,8 +259,40 @@ header {
   }
 }
 
+.hide-pagination {
+  display: none;
+}
+
 .disableActive {
   opacity: 0.5;
 }
 
+.overlay-card {
+  position: fixed;
+  right: 10rem;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.individual-guest-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  @include flex-col;
+  gap: 1rem;
+  align-items: center;
+
+  .individual-guest-info {
+    @include flex-col;
+    gap: 6px;
+  }
+
+  input {
+    width: 22rem;
+    padding: 9.5px 16px;
+    border: 1px solid $Grey-200;
+    border-radius: 8px;
+  }
+}
