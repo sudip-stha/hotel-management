@@ -1256,6 +1256,7 @@ const guestFormTitle:GuestFormTitleType = {
   totalAmt: "Total amount",
   amtPaid: "Amount paid",
   status: "Status",
+  checkInDate:"Check in date"
 };
 
 export const guestData = {

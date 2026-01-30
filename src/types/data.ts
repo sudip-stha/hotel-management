@@ -98,13 +98,13 @@ export interface GuestTableDataType {
   totalAmt: number;
   amtPaid: number;
   status: string;
-  checkIn: boolean;
-  dotIcon: string;
-  registrationNumber: number;
+  checkIn?: boolean;
+  dotIcon?: string;
+  registrationNumber?: number;
   checkInDate: string;
-  roomType: string;
-  stay: string;
-  discount: number;
+  roomType?: string;
+  stay?: string;
+  discount?: number;
   guestPP: string;
 }
 
@@ -175,4 +175,24 @@ export interface GuestFormTitleType {
   totalAmt: string;
   amtPaid: string;
   status: string;
+  checkInDate: string;
+}
+
+export interface UpdateGuestArgumentType {
+  id: number;
+  reservationId: number;
+  name: string;
+  roomNumber: string;
+  totalAmt: number;
+  amtPaid: number;
+  status: string;
+  checkInDate: string;
+  guestPP: string;
+  dotIcon: string;
+}
+
+export interface UpdateGuestType {
+  updateGuest: (from: UpdateGuestArgumentType) => void;
+  totalGuest: number;
+  onClose: () => void;
 }

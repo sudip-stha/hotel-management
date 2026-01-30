@@ -8,7 +8,10 @@ import { useState, type ChangeEvent } from "react";
 import PaginationList from "./PaginationList.tsx";
 import FilterButton from "../../ui/buttons/FilterButton.tsx";
 import GuestIndividual from "./GuestIndividual.tsx";
-import type { GuestTableDataType } from "../../../types/data.ts";
+import type {
+  GuestTableDataType,
+  UpdateGuestArgumentType,
+} from "../../../types/data.ts";
 import AddButton from "../../ui/buttons/AddButton.tsx";
 import AddGuest from "./AddGuest.tsx";
 
@@ -68,6 +71,12 @@ const Guest = () => {
     setCurrentPage(pageNumber);
   }
 
+  //Add the guest in table
+  function updateGuest(form: UpdateGuestArgumentType) {
+    guestData.tableData.unshift(form);
+    setSelectedGuest(form);
+  }
+
   //final render data (10 data per page)
   const currentList = actualTableData.slice(startIndex, endIndex);
 
@@ -93,7 +102,11 @@ const Guest = () => {
       {/* for open add guest form */}
       {addBtn && (
         <div className="overlay-card" onClick={() => setAddBtn(false)}>
-          <AddGuest />
+          <AddGuest
+            updateGuest={updateGuest}
+            totalGuest={actualTableData.length}
+            onClose={() => setAddBtn(false)}
+          />
         </div>
       )}
 
