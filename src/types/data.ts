@@ -53,7 +53,12 @@ export interface SecondaryBtnType {
 
 export interface SecondaryBtnTypeWrap {
   value: SecondaryBtnType;
-  btnAction?: ButtonAction;
+  btnAction: ButtonAction;
+}
+
+export interface AddBtnTypeWrap {
+  value: SecondaryBtnType;
+  onClickAddBtn?: () => void;
 }
 
 export interface PrimaryBtnType {

@@ -283,13 +283,14 @@ header {
   @include flex-col;
   gap: 1rem;
   align-items: center;
-
+  box-shadow: 9px 7px 30px 2px black;
   .individual-guest-info {
     @include flex-col;
     gap: 6px;
   }
 
-  input {
+  input,
+  select {
     width: 22rem;
     padding: 9.5px 16px;
     border: 1px solid $Grey-200;

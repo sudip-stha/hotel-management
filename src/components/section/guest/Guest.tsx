@@ -10,6 +10,7 @@ import FilterButton from "../../ui/buttons/FilterButton.tsx";
 import GuestIndividual from "./GuestIndividual.tsx";
 import type { GuestTableDataType } from "../../../types/data.ts";
 import AddButton from "../../ui/buttons/AddButton.tsx";
+import AddGuest from "./AddGuest.tsx";
 
 const Guest = () => {
   let actualTableData = guestData.tableData;
@@ -20,6 +21,7 @@ const Guest = () => {
     null,
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [addBtn, setAddBtn] = useState(false);
 
   //For Searching
   const [inputRoomNumber, setInputRoomNumber] = useState("");
@@ -78,12 +80,20 @@ const Guest = () => {
 
   return (
     <div className="container">
+      {/* for individual guest popup */}
       {isModalOpen && (
-        <div className="overlay-card">
+        <div className="overlay-card" onClick={() => setIsModalOpen(false)}>
           <GuestIndividual
             guest={selectedGuest!}
             onClose={() => setIsModalOpen(false)}
           />
+        </div>
+      )}
+
+      {/* for open add guest form */}
+      {addBtn && (
+        <div className="overlay-card" onClick={() => setAddBtn(false)}>
+          <AddGuest />
         </div>
       )}
 
@@ -103,7 +113,10 @@ const Guest = () => {
         </div>
 
         <div className="left-side-btns right-side-btn">
-          <AddButton value={guestData.btn6} />
+          <AddButton
+            value={guestData.btn6}
+            onClickAddBtn={() => setAddBtn(true)}
+          />
           <FilterButton
             value={guestData.btn3}
             handleFilterChange={handleFilterChange}
