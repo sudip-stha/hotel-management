@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import type { NavListing } from "../types/data";
+import type { NavListing } from "../../types/data";
 
 const NavList = ({ navList }: NavListing) => {
   return (
