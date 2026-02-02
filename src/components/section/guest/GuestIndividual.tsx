@@ -5,7 +5,7 @@ import type { guestIndividualType } from "../../../types/data";
 const GuestIndividual = ({ guest, onClose }: guestIndividualType) => {
   return (
     <div className="individual-guest-card" onClick={(e) => e.stopPropagation()}>
-      <img src={guest.guestPP} alt="" />
+      <img src={guest.guestPP} alt="Profile Picture" />
 
       <div className="individual-guest-info">
         <Heading value={guestData.guestIndividual.guestName} />

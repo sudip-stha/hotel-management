@@ -288,6 +288,9 @@ header {
     @include flex-col;
     gap: 6px;
   }
+  img {
+    width: 5rem;
+  }
 
   input,
   select {

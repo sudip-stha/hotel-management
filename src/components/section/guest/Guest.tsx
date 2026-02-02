@@ -145,6 +145,7 @@ const Guest = () => {
       </div>
 
       <div className="table-container">
+        
         <TableHead item={guestData.tableTitle} />
         <GuestTableData
           data={currentList}

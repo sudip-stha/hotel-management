@@ -18,13 +18,48 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
     dotIcon: "/images/threeDot.svg",
   });
 
+  //validate the check in date
+  function checkValidity(e: ChangeEvent<HTMLInputElement>) {
+    const inputDate = e.target.value;
+
+    const splitDate = inputDate.split("/");
+
+    const day = parseInt(splitDate[0], 10);
+    const month = parseInt(splitDate[1], 10) - 1;
+    const year = 2000 + parseInt(splitDate[2], 10);
+
+    const integerInputDate = new Date(year, month, day);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    if (integerInputDate < today) {
+      e.target.setCustomValidity("You cannot enter a past date.");
+    } else {
+      e.target.setCustomValidity("");
+    }
+  }
+
+  //handle image upload for profile picture and other user input
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
+    let imgName;
+    if (e.target.id === "guestPP") {
+      imgName = e.target.files![0];
+
+      const imageUrl = URL.createObjectURL(imgName);
+
+      setForm({
+        ...form,
+        guestPP: imageUrl,
+      });
+      return; //stop fakepath from being saved
+    }
     setForm({
       ...form,
       [e.target.id]: e.target.value,
     });
   }
 
+  //handle the guest status input
   function handleChangeStatus(e: ChangeEvent<HTMLSelectElement>) {
     setForm({
       ...form,
@@ -32,10 +67,10 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
     });
   }
 
+  //handle the form submission
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const addGuestId = guestId + 1;
-    setGuestId(addGuestId);
+    setGuestId((prev) => prev + 1);
     updateGuest(form);
     onClose();
   }
@@ -47,7 +82,14 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
         className="individual-guest-card"
         onClick={(e) => e.stopPropagation()}
       >
-        <input type="file" id="guestPP" accept="image/png" required />
+        <input
+          type="file"
+          id="guestPP"
+          name="image"
+          accept="image/png"
+          onChange={handleChange}
+          required
+        />
 
         <div className="individual-guest-info">
           <Heading value={guestData.guestFormTitle.reservationId} />
@@ -163,16 +205,14 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
             id="checkInDate"
             placeholder="Example: 20/12/23"
             pattern="([0-9]{1,2})/([0-9]{1,2})/[0-9]{2}"
-            title="Match pattern: 20/12/23"
+            title="Match pattern: 2/2/26"
             onChange={handleChange}
             onInvalid={(e) =>
               (e.target as HTMLInputElement).setCustomValidity(
-                "Match pattern: 20/12/23",
+                "Match pattern: 2/2/26 and You cannot enter a past date.",
               )
             }
-            onInput={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity("")
-            }
+            onInput={checkValidity}
             required
           />
         </div>
