@@ -22,6 +22,7 @@ const PaginationList = ({
   for (let i = 1; i <= totalPages; i++) {
     page.push(i);
   }
+
   return (
     <div
       className={`guest-bottom-btns ${totalPages === 1 ? "hide-pagination" : " "}`}

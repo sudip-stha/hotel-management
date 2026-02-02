@@ -14,9 +14,12 @@ import type {
 } from "../../../types/data.ts";
 import AddButton from "../../ui/buttons/AddButton.tsx";
 import AddGuest from "./AddGuest.tsx";
+import { useSearchParams } from "react-router-dom";
 
 const Guest = () => {
   let actualTableData = guestData.tableData;
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [activeFilter, setActiveFilter] = useState("");
   const [filterData, setFilterData] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -52,7 +55,6 @@ const Guest = () => {
   function handleFilterChange(e: ChangeEvent<HTMLSelectElement>) {
     setFilterData(e.target.value);
   }
-
   if (filterData) {
     actualTableData = actualTableData.filter((row) =>
       row.status.includes(filterData),
@@ -62,13 +64,13 @@ const Guest = () => {
   //For pagination
 
   const itemsPerPage = 10;
-
   const totalPages = Math.ceil(actualTableData.length / itemsPerPage);
   const endIndex = currentPage * itemsPerPage;
   const startIndex = endIndex - itemsPerPage;
 
   function hanldePagination(pageNumber: number) {
     setCurrentPage(pageNumber);
+    setSearchParams({ page: pageNumber.toString() });
   }
 
   //Add the guest in table
@@ -145,7 +147,9 @@ const Guest = () => {
       </div>
 
       <div className="table-container">
-        
+        <div className="current-page-show">
+          Page {`${currentPage} of ${totalPages}`}
+        </div>
         <TableHead item={guestData.tableTitle} />
         <GuestTableData
           data={currentList}

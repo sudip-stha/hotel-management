@@ -300,3 +300,8 @@ header {
     border-radius: 8px;
   }
 }
+
+.current-page-show {
+  @include inter-regular($font-size: 12px);
+  color: $Grey-400;
+}
