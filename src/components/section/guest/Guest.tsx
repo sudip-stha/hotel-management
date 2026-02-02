@@ -18,7 +18,7 @@ import { useSearchParams } from "react-router-dom";
 
 const Guest = () => {
   let actualTableData = guestData.tableData;
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [, setSearchParams] = useSearchParams();
 
   const [activeFilter, setActiveFilter] = useState("");
   const [filterData, setFilterData] = useState("");
