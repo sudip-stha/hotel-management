@@ -3,7 +3,7 @@ import PrimaryButton from "../../ui/buttons/PrimaryButton.tsx";
 import Input from "../../ui/input/Input.tsx";
 import GuestTableData from "../../table/GuestTableData.js";
 import TableHead from "../../table/TableHead.js";
-import Heading from "../../ui/Heading.tsx";
+import Heading_6 from "../../ui/heading/Headin_6.tsx";
 import { useState, type ChangeEvent } from "react";
 import PaginationList from "./PaginationList.tsx";
 import FilterButton from "../../ui/buttons/FilterButton.tsx";
@@ -111,7 +111,7 @@ const Guest = () => {
         </div>
       )}
 
-      <Heading value={guestData.title} />
+      <Heading_6 value={guestData.title} />
       <div className="btns-container">
         <div className="left-side-btns">
           <PrimaryButton

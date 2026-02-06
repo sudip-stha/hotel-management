@@ -1,5 +1,5 @@
 import { guestData } from "../../../data/guest";
-import Heading from "../../ui/Heading";
+import Heading from "../../ui/heading/Headin_6";
 import type { guestIndividualType } from "../../../types/data";
 
 const GuestIndividual = ({ guest, onClose }: guestIndividualType) => {

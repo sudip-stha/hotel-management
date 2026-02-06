@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-$Dashboard: #f3f3f4;
+$Dashboard: #eef0f2;
 
 $Primary-50: #e8f1fd;
 $Primary-400: #448df2;
@@ -15,6 +15,7 @@ $Grey-300: #989fad;
 $Grey-400: #858d9d;
 $Grey-500: #667085;
 $Grey-600: #5d6679;
+$Grey-800: #383e49;
 $Grey-900: #2b2f38;
 
 $Error-50: #feeceb;
@@ -25,6 +26,14 @@ $Success-400: #41c588;
 
 $Warning-50: #fef4e6;
 $Warning-400: #f9a63a;
+
+@mixin inter-semi-bold($font-size: 14px) {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: $font-size;
+  font-style: normal;
+}
 
 @mixin inter-medium($font-size: 14px) {
   font-family: "Inter", sans-serif;

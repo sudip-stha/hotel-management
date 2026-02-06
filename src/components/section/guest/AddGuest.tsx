@@ -1,6 +1,6 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { guestData } from "../../../data/guest";
-import Heading from "../../ui/Heading";
+import Heading from "../../ui/heading/Headin_6";
 import type { UpdateGuestType } from "../../../types/data";
 
 const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {

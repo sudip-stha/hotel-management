@@ -1,5 +1,5 @@
 import { roomData } from "../../data/room";
-import Heading from "../ui/Heading";
+import Heading_6 from "../ui/heading/Headin_6";
 import PrimaryButton from "../ui/buttons/PrimaryButton";
 import AddButton from "../ui/buttons/AddButton";
 import RoomTableHead from "../table/RoomTableHead";
@@ -11,7 +11,7 @@ function hanldePagination() {}
 const Room = () => {
   return (
     <div className="container">
-      <Heading value={roomData.title} />
+      <Heading_6 value={roomData.title} />
       <div className="btns-container">
         <div className="left-side-btns">
           <PrimaryButton value={roomData.buttonValue.btn1} />

@@ -306,7 +306,45 @@ header {
   color: $Grey-400;
 }
 
+.dashboard-main-container {
+  background-color: $Dashboard;
+}
+
 .dashboard-overview-container {
+  background-color: #fff;
   @include flex-col;
   gap: 1rem;
+  padding: 20px 16px;
+  margin: 20px;
+  border-radius: 8px;
+
+  h3 {
+    @include inter-medium($font-size: 20px);
+    color: $Grey-800;
+  }
+}
+
+.overview-data-container {
+  display: flex;
+  gap: 4.75rem;
+}
+
+.overview-data-wrapper {
+  .data-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    h2 {
+      @include inter-semi-bold($font-size: 26px);
+      color: $Primary-600;
+    }
+    :nth-child(-n + 1) {
+      @include inter-medium($font-size: 16px);
+      color: $Grey-600;
+    }
+  }
+  :nth-child(-n + 1) {
+    @include inter-regular($font-size: 14px);
+    color: $Grey-400;
+  }
 }
