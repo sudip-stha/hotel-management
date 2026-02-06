@@ -310,7 +310,7 @@ header {
   background-color: $Dashboard;
 }
 
-.dashboard-overview-container {
+.dashboard-sub-container {
   background-color: #fff;
   @include flex-col;
   gap: 1rem;
@@ -348,3 +348,4 @@ header {
     color: $Grey-400;
   }
 }
+

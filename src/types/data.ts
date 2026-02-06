@@ -209,3 +209,18 @@ export interface OverviewType {
   today: string;
   total: string;
 }
+
+//for dashboard
+interface DashBoardRoomDetails {
+  deal: string;
+  roomType: string;
+  bookedRoom: number;
+  totalRoom: number;
+  perDayPrice: number;
+  dotIcon: string;
+}
+
+export interface DashBoardRoom {
+  title: string;
+  RoomDetails: DashBoardRoomDetails[];
+}

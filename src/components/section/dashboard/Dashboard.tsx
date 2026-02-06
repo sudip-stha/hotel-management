@@ -2,6 +2,7 @@ import AddButton from "../../ui/buttons/AddButton";
 import Heading_6 from "../../ui/heading/Headin_6";
 import { dashboardData } from "../../../data/dashboard";
 import Overview from "./Overview";
+import DashboardRooms from "./DashboardRooms";
 
 const Dashboard = () => {
   const todayDate = new Date();
@@ -14,6 +15,7 @@ const Dashboard = () => {
       </div>
       <div className="dashboard-main-container">
         <Overview />
+        <DashboardRooms />
       </div>
     </div>
   );

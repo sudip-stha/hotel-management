@@ -21,7 +21,7 @@ const Overview = () => {
   const occupiedRoomInString = guestData.tableData.length.toString();
 
   return (
-    <div className="dashboard-overview-container">
+    <div className="dashboard-sub-container">
       <h3>{dashboardData.overview.title}</h3>
       <div className="overview-data-container">
         <div className="overview-data-wrapper">
