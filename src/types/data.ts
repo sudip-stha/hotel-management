@@ -196,3 +196,16 @@ export interface UpdateGuestType {
   totalGuest: number;
   onClose: () => void;
 }
+
+export interface OverviewType {
+  title: string;
+  checkInTitle: string;
+  checkOutTitle: string;
+  inHotelTitle: string;
+  inHotelValue: number;
+  availableRoomTitle: string;
+  availableRoomValue: number;
+  occupiedRoomTitle: string;
+  today: string;
+  total: string;
+}

@@ -305,3 +305,8 @@ header {
   @include inter-regular($font-size: 12px);
   color: $Grey-400;
 }
+
+.dashboard-overview-container {
+  @include flex-col;
+  gap: 1rem;
+}

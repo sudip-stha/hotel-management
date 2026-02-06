@@ -83,7 +83,6 @@ const Guest = () => {
   const currentList = actualTableData.slice(startIndex, endIndex);
 
   //individual guest popup
-
   function handleIndividualData(guest: GuestTableDataType) {
     setSelectedGuest(guest);
     setIsModalOpen(true);

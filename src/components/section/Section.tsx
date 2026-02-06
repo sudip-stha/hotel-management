@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import FrontDesk from "../section/FrontDesk";
 import Rate from "../section/Rate";
 import Room from "../section/Room";
-import Dashboard from "../section/Dashboard";
+import Dashboard from "./dashboard/Dashboard";
 import { AppRoutes } from "../../data/routes";
 
 const Section = () => {
