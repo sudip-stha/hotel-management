@@ -349,3 +349,61 @@ header {
   }
 }
 
+.dashboard-room-container {
+  display: flex;
+  gap: 1.4rem;
+  padding: 1rem;
+  .room-details-container {
+    border: 1px solid $Grey-100;
+    border-radius: 8px;
+    padding: 1rem;
+    @include flex-col;
+    gap: 4px;
+
+    .room-top-wrapper {
+      display: flex;
+      gap: 9.2rem;
+
+      .room-data-deal {
+        background-color: $Success-100;
+        color: $Success-700;
+        padding: 2px 8px;
+        border-radius: 4px;
+        @include inter-medium($font-size: 12px);
+      }
+    }
+
+    span {
+      @include inter-medium($font-size: 16px);
+      color: $Grey-600;
+    }
+
+    .room-data-wrapper {
+      display: flex;
+      align-items: end;
+      gap: 3px;
+
+      h2 {
+        @include inter-semi-bold($font-size: 23px);
+      }
+    }
+
+    .numberOfRoom {
+      h2 {
+        color: $Grey-600;
+      }
+      span {
+        color: $Grey-400;
+      }
+    }
+
+    .roomPrice {
+      h2 {
+        color: $Primary-600;
+      }
+      span {
+        color: $Grey-400;
+      }
+    }
+  }
+}

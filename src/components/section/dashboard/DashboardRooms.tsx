@@ -10,15 +10,19 @@ const DashboardRooms = () => {
         {dashboardData.rooms.RoomDetails.map((data) => {
           return (
             <div className="room-details-container" key={data.roomType}>
-              <div className="room-top wrapper">
-                <span>{data.deal}</span>
+              <div className="room-top-wrapper">
+                <span className="room-data-deal">{data.deal}</span>
                 <img src={data.dotIcon} alt="This is a dot icon." />
               </div>
-              <span>{data.roomType}</span>
-              <Heading_2 value={data.bookedRoom.toString()} />
-              <span> {`/ ${data.totalRoom}`}</span>
-              <Heading_2 value={`$ ${data.perDayPrice.toString()}`} />
-              <span>/ day</span>
+              <span >{data.roomType}</span>
+              <div className="room-data-wrapper numberOfRoom">
+                <Heading_2 value={data.bookedRoom.toString()} />
+                <span> {`/ ${data.totalRoom}`}</span>
+              </div>
+              <div className="room-data-wrapper roomPrice">
+                <Heading_2 value={`$ ${data.perDayPrice.toString()}`} />
+                <span>/ day</span>
+              </div>
             </div>
           );
         })}
