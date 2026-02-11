@@ -4,6 +4,7 @@ import type {
   OverviewType,
   RoomStatusDetails,
   SecondaryBtnType,
+  OccupancyStatistics,
 } from "../types/data";
 
 const btn1: SecondaryBtnType = {
@@ -106,10 +107,25 @@ const floorStatus: FloorStatus = {
   completed: 80,
 };
 
+const occupancyStatistics: OccupancyStatistics = {
+  title: "Occupancy Statistics",
+  janStats:99,
+  febStats:100,
+  mayStats:88,
+  junStats:65,
+  julStats:83,
+  augStats:40,
+  sepStats:100,
+  octStats:85,
+  novStats:85,
+  decStats:85,
+};
+
 export const dashboardData = {
   btn1,
   overview,
   rooms,
   roomStatus,
   floorStatus,
+  occupancyStatistics,
 };

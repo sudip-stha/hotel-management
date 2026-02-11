@@ -363,8 +363,7 @@ header {
 
 .dashboard-room-container {
   display: flex;
-  gap: 4rem;
-  padding: 1rem;
+  gap: 2rem;
   .room-details-container {
     border: 1px solid $Grey-100;
     border-radius: 8px;
@@ -374,7 +373,7 @@ header {
 
     .room-top-wrapper {
       display: flex;
-      gap: 11rem;
+      gap: 13.5rem;
 
       .room-data-deal {
         background-color: $Success-100;
@@ -454,14 +453,14 @@ header {
 
 .doughnut-wrapper {
   margin-left: 3rem;
-  width: 17rem;
+  width: 15.8rem;
   height: 8rem;
 }
 
 .completed-value {
   position: relative;
-  top: -2.5rem;
-  left: 4.3rem;
+  top: -2.6rem;
+  left: 6.3rem;
   @include inter-semi-bold($font-size: 26px);
   color: $Grey-800;
 }
@@ -496,4 +495,9 @@ header {
   .remain {
     background-color: $Dashboard;
   }
+}
+
+.bar-stats {
+  width: 48rem;
+  height: 18rem;
 }

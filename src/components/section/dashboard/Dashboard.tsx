@@ -5,6 +5,7 @@ import Overview from "./Overview";
 import DashboardRooms from "./DashboardRooms";
 import DashboardRoomStatus from "./DashboardRoomStatus";
 import DashboardFloorStatus from "./DashboardFloorStatus";
+import OccupancyStatistics from "./OccupancyStatistics";
 
 const Dashboard = () => {
   const todayDate = new Date();
@@ -26,6 +27,9 @@ const Dashboard = () => {
         <div className="dashboard-status-section">
           <DashboardRoomStatus />
           <DashboardFloorStatus />
+        </div>
+        <div className="dashboard-status-section">
+          <OccupancyStatistics />
         </div>
       </div>
     </div>

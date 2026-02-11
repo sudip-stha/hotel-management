@@ -11,10 +11,12 @@ const DashboardRooms = () => {
           return (
             <div className="room-details-container" key={data.roomType}>
               <div className="room-top-wrapper">
-                <span className="room-data-deal">{data.deal}</span>
+                <span className={`${data.deal && "room-data-deal"}`}>
+                  {data.deal}
+                </span>
                 <img src={data.dotIcon} alt="This is a dot icon." />
               </div>
-              <span >{data.roomType}</span>
+              <span>{data.roomType}</span>
               <div className="room-data-wrapper numberOfRoom">
                 <Heading_2 value={data.bookedRoom.toString()} />
                 <span> {`/ ${data.totalRoom}`}</span>

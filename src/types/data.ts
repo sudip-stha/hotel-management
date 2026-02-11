@@ -240,3 +240,17 @@ export interface FloorStatus {
   title: string;
   completed: number;
 }
+
+export interface OccupancyStatistics {
+  title: string;
+  janStats: number;
+  febStats: number;
+  mayStats: number;
+  junStats: number;
+  julStats: number;
+  augStats: number;
+  sepStats: number;
+  octStats: number;
+  novStats: number;
+  decStats: number;
+}

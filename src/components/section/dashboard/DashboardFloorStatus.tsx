@@ -26,6 +26,7 @@ const DashboardFloorStatus = () => {
       <div className="sub-floor-status">
         <div className="doughnut-wrapper">
           <Doughnut data={data} options={options} />
+
           <span className="completed-value">{completed}%</span>
         </div>
         <div className="color-indicate">
