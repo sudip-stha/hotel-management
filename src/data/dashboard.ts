@@ -1,6 +1,8 @@
 import type {
   DashBoardRoom,
+  FloorStatus,
   OverviewType,
+  RoomStatusDetails,
   SecondaryBtnType,
 } from "../types/data";
 
@@ -59,8 +61,55 @@ const rooms: DashBoardRoom = {
   ],
 };
 
+const roomStatus: RoomStatusDetails = {
+  title: "Room status",
+  occupiedRooms: [
+    {
+      title: "Occupied rooms",
+      value: 104,
+    },
+    {
+      title: "Clean",
+      value: 90,
+    },
+    {
+      title: "Dirty",
+      value: 4,
+    },
+    {
+      title: "Inspected",
+      value: 60,
+    },
+  ],
+  availableRooms: [
+    {
+      title: "Available rooms",
+      value: 20,
+    },
+    {
+      title: "Clean",
+      value: 30,
+    },
+    {
+      title: "Dirty",
+      value: 19,
+    },
+    {
+      title: "Inspected",
+      value: 30,
+    },
+  ],
+};
+
+const floorStatus: FloorStatus = {
+  title: "Floor status",
+  completed: 80,
+};
+
 export const dashboardData = {
   btn1,
   overview,
   rooms,
+  roomStatus,
+  floorStatus,
 };

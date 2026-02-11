@@ -308,6 +308,18 @@ header {
 
 .dashboard-main-container {
   background-color: $Dashboard;
+  padding: 20px;
+}
+
+.dashboard-top {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  h6 {
+    @include inter-regular($font-size: 18px);
+    color: $Grey-600;
+    margin: 0 auto;
+  }
 }
 
 .dashboard-sub-container {
@@ -315,7 +327,7 @@ header {
   @include flex-col;
   gap: 1rem;
   padding: 20px 16px;
-  margin: 20px;
+  margin-bottom: 20px;
   border-radius: 8px;
 
   h3 {
@@ -326,13 +338,13 @@ header {
 
 .overview-data-container {
   display: flex;
-  gap: 4.75rem;
+  gap: 9rem;
 }
 
 .overview-data-wrapper {
   .data-wrapper {
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
     align-items: end;
     h2 {
       @include inter-semi-bold($font-size: 26px);
@@ -351,7 +363,7 @@ header {
 
 .dashboard-room-container {
   display: flex;
-  gap: 1.4rem;
+  gap: 4rem;
   padding: 1rem;
   .room-details-container {
     border: 1px solid $Grey-100;
@@ -362,7 +374,7 @@ header {
 
     .room-top-wrapper {
       display: flex;
-      gap: 9.2rem;
+      gap: 11rem;
 
       .room-data-deal {
         background-color: $Success-100;
@@ -405,5 +417,83 @@ header {
         color: $Grey-400;
       }
     }
+  }
+}
+
+.dashboard-status-section {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.room-status-container {
+  display: flex;
+  gap: 11rem;
+}
+
+.room-status-list {
+  @include flex-col;
+  gap: 1rem;
+
+  .room-status-list-value {
+    display: flex;
+    gap: 9rem;
+    :nth-child(-n + 1) {
+      width: 7.9rem;
+    }
+  }
+  .room-status-list-value:first-child {
+    @include inter-medium($font-size: 16px);
+    color: $Grey-600;
+  }
+
+  .room-status-list-value:nth-child(n + 2) {
+    @include inter-regular;
+    color: $Grey-400;
+  }
+}
+
+.doughnut-wrapper {
+  margin-left: 3rem;
+  width: 17rem;
+  height: 8rem;
+}
+
+.completed-value {
+  position: relative;
+  top: -2.5rem;
+  left: 4.3rem;
+  @include inter-semi-bold($font-size: 26px);
+  color: $Grey-800;
+}
+
+.sub-floor-status {
+  display: flex;
+}
+
+.color-indicate {
+  @include flex-col;
+  gap: 10px;
+}
+
+.color-indicate-item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .label {
+    @include inter-regular($font-size: 12px);
+    color: $Grey-400;
+  }
+
+  .completed {
+    background-color: $Primary-400;
+  }
+
+  .remain {
+    background-color: $Dashboard;
   }
 }

@@ -224,3 +224,19 @@ export interface DashBoardRoom {
   title: string;
   RoomDetails: DashBoardRoomDetails[];
 }
+
+interface RoomStatus {
+  title: string;
+  value: number;
+}
+
+export interface RoomStatusDetails {
+  title: string;
+  occupiedRooms: RoomStatus[];
+  availableRooms: RoomStatus[];
+}
+
+export interface FloorStatus {
+  title: string;
+  completed: number;
+}
