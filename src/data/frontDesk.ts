@@ -3,6 +3,8 @@ import type {
   RoomTableDataType,
   CheckDateType,
   AgeYears,
+  IncAndDecBtnType,
+  SecondaryBtnType,
 } from "../types/data";
 
 const title = "Front Desk";
@@ -30,6 +32,15 @@ const AgeYears: AgeYears[] = [
     description: "0-12 years",
   },
 ];
+
+const IncAndDecBtn: IncAndDecBtnType = {
+  incrementBtn: "/images/plusIcon.svg",
+  DecrementBtn: "/images/minusIcon.svg",
+};
+
+const btn6: SecondaryBtnType = {
+  title: "Check availability",
+};
 
 const tableTitle: string[] = [
   "Room number",
@@ -89,4 +100,6 @@ export const frontDeskData = {
   buttonValue,
   checkDate,
   AgeYears,
+  IncAndDecBtn,
+  btn6,
 };

@@ -283,3 +283,8 @@ export interface AgeYears {
   title: string;
   description: string;
 }
+
+export interface IncAndDecBtnType{
+   incrementBtn: string,
+  DecrementBtn: string,
+}

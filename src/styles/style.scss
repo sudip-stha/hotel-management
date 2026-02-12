@@ -554,3 +554,87 @@ header {
     margin-left: auto;
   }
 }
+
+.increase-btn {
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.front-desk-top-container {
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px -2px rgba(16, 24, 40, 0.1);
+  align-items: center;
+  background-color: $Grey-50;
+  padding: 1.5rem;
+
+  button {
+    margin-left: auto;
+  }
+}
+
+.front-desk-top-left {
+  @include flex-col;
+  gap: 1.5rem;
+  .btn-container {
+    display: flex;
+    gap: 12px;
+    button {
+      background-color: transparent;
+    }
+  }
+}
+
+.check-date-container {
+  display: flex;
+  gap: 2rem;
+  padding: 0 0.8rem;
+  .check-data {
+    @include flex-col;
+    gap: 0.4rem;
+    @include inter-medium;
+    color: $Grey-800;
+
+    input {
+      padding: 0.6rem 1rem;
+      border: 1px solid $Grey-200;
+      border-radius: 8px;
+      background-color: transparent;
+    }
+  }
+}
+
+.enter-guest-sub-container {
+  display: flex;
+  gap: 2rem;
+  padding: 0 0.8rem;
+}
+
+.age-wise-division {
+  display: flex;
+  gap: 2rem;
+
+  .age-wise-description {
+    @include flex-col;
+    gap: 6px;
+    @include inter-medium;
+    :nth-child(-n + 1) {
+      color: $Grey-800;
+    }
+    :nth-child(-2n + 2) {
+      color: $Grey-600;
+    }
+  }
+
+  .inc-and-dec-btn {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    span {
+      @include inter-medium($font-size: 18px);
+      color: $Grey-800;
+    }
+  }
+}
