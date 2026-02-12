@@ -6,6 +6,7 @@ import DashboardRooms from "./DashboardRooms";
 import DashboardRoomStatus from "./DashboardRoomStatus";
 import DashboardFloorStatus from "./DashboardFloorStatus";
 import OccupancyStatistics from "./OccupancyStatistics";
+import CustomersFeedback from "./CustomersFeedback";
 
 const Dashboard = () => {
   const todayDate = new Date();
@@ -30,6 +31,7 @@ const Dashboard = () => {
         </div>
         <div className="dashboard-status-section">
           <OccupancyStatistics />
+          <CustomersFeedback />
         </div>
       </div>
     </div>

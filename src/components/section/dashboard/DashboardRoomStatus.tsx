@@ -1,9 +1,10 @@
 import { dashboardData } from "../../../data/dashboard";
+import Heading_3 from "../../ui/heading/Heading_3";
 
 const DashboardRoomStatus = () => {
   return (
     <div className="dashboard-sub-container">
-      <h3>{dashboardData.roomStatus.title}</h3>
+      <Heading_3 value={dashboardData.roomStatus.title} />
 
       <div className="room-status-container">
         <div className="room-status-list">

@@ -3,6 +3,7 @@ import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
 import { useRef } from "react";
 import Button from "../../ui/buttons/Button";
+import Heading_3 from "../../ui/heading/Heading_3";
 
 const OccupancyStatistics = () => {
   const ref = useRef(null);
@@ -78,7 +79,7 @@ const OccupancyStatistics = () => {
   return (
     <div className="dashboard-sub-container">
       <div className="top-part-occupancy">
-        <h3>{dashboardData.occupancyStatistics.title}</h3>
+        <Heading_3 value={dashboardData.occupancyStatistics.title} />
         <Button
           value={dashboardData.occupancyStatistics.monthBtn}
           btnAction={{

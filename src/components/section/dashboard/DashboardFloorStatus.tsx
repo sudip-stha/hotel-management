@@ -1,6 +1,7 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { dashboardData } from "../../../data/dashboard";
+import Heading_3 from "../../ui/heading/Heading_3";
 
 const DashboardFloorStatus = () => {
   ChartJS.register(ArcElement, Tooltip, Legend);
@@ -22,7 +23,7 @@ const DashboardFloorStatus = () => {
   };
   return (
     <div className="dashboard-sub-container">
-      <h3>{dashboardData.floorStatus.title}</h3>
+      <Heading_3 value={dashboardData.floorStatus.title} />
       <div className="sub-floor-status">
         <div className="doughnut-wrapper">
           <Doughnut data={data} options={options} />

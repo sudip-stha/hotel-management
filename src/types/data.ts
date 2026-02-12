@@ -255,3 +255,15 @@ export interface OccupancyStatistics {
   decStats: number;
   monthBtn: SecondaryBtnType;
 }
+
+interface UserCommentType {
+  name: string;
+  comment: string;
+  roomNumber: string;
+}
+
+export interface CustomersFeedbackType {
+  title: string;
+  dotIcon: string;
+  userComment: UserCommentType[];
+}

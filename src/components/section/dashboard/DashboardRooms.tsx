@@ -1,10 +1,11 @@
 import { dashboardData } from "../../../data/dashboard";
 import Heading_2 from "../../ui/heading/Heading_2";
+import Heading_3 from "../../ui/heading/Heading_3";
 
 const DashboardRooms = () => {
   return (
     <div className="dashboard-sub-container">
-      <h3>{dashboardData.rooms.title}</h3>
+      <Heading_3 value={dashboardData.rooms.title} />
 
       <div className="dashboard-room-container">
         {dashboardData.rooms.RoomDetails.map((data) => {

@@ -5,6 +5,7 @@ import type {
   RoomStatusDetails,
   SecondaryBtnType,
   OccupancyStatistics,
+  CustomersFeedbackType,
 } from "../types/data";
 
 const btn1: SecondaryBtnType = {
@@ -125,6 +126,28 @@ const occupancyStatistics: OccupancyStatistics = {
   },
 };
 
+const customersFeedback: CustomersFeedbackType = {
+  title: "Customers feedback",
+  dotIcon: "/images/threeDot.svg",
+  userComment: [
+    {
+      name: "Mark",
+      comment: "Food could be better.",
+      roomNumber: "A201",
+    },
+    {
+      name: "Christian",
+      comment: "Facilities are not enough for amount paid.",
+      roomNumber: "A101",
+    },
+    {
+      name: "Alexander",
+      comment: "Room cleaning could be better.",
+      roomNumber: "A301",
+    },
+  ],
+};
+
 export const dashboardData = {
   btn1,
   overview,
@@ -132,4 +155,5 @@ export const dashboardData = {
   roomStatus,
   floorStatus,
   occupancyStatistics,
+  customersFeedback,
 };

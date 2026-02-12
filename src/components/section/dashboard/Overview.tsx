@@ -1,6 +1,7 @@
 import { dashboardData } from "../../../data/dashboard";
 import { guestData } from "../../../data/guest";
 import Heading_2 from "../../ui/heading/Heading_2";
+import Heading_3 from "../../ui/heading/Heading_3";
 
 const Overview = () => {
   //calculate total check in and check out guests
@@ -16,7 +17,7 @@ const Overview = () => {
 
   return (
     <div className="dashboard-sub-container">
-      <h3>{dashboardData.overview.title}</h3>
+      <Heading_3 value={dashboardData.overview.title} />
       <div className="overview-data-container">
         <div className="overview-data-wrapper">
           <span>{dashboardData.overview.today}</span>
