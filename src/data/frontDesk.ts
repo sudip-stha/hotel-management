@@ -1,6 +1,35 @@
-import type { RoomTableDataType } from "../types/data";
+import type {
+  frontDeskButton,
+  RoomTableDataType,
+  CheckDateType,
+  AgeYears,
+} from "../types/data";
 
 const title = "Front Desk";
+
+const buttonValue: frontDeskButton = {
+  btn1: "All room(5)",
+  btn2: "Single",
+  btn3: "Double",
+  btn4: "Triple",
+  btn5: "VIP",
+};
+
+const checkDate: CheckDateType = {
+  checkIn: "Check in",
+  checkOut: "Check out",
+};
+
+const AgeYears: AgeYears[] = [
+  {
+    title: "Adult",
+    description: "Older than 12 years",
+  },
+  {
+    title: "Children",
+    description: "0-12 years",
+  },
+];
 
 const tableTitle: string[] = [
   "Room number",
@@ -53,8 +82,11 @@ const tableData: RoomTableDataType[] = [
   },
 ];
 
-export const frontDesk = {
+export const frontDeskData = {
   title,
   tableTitle,
   tableData,
+  buttonValue,
+  checkDate,
+  AgeYears,
 };

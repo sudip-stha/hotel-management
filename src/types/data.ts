@@ -269,3 +269,17 @@ export interface CustomersFeedbackType {
 }
 
 //For Front Desk
+export interface frontDeskButton extends ButtonValue {
+  btn4: string;
+  btn5: string;
+}
+
+export interface CheckDateType {
+  checkIn: string;
+  checkOut: string;
+}
+
+export interface AgeYears {
+  title: string;
+  description: string;
+}
