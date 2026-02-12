@@ -515,3 +515,41 @@ header {
   width: 48rem;
   height: 18rem;
 }
+
+//Cutomers feedback section css
+.top-part-feedback {
+  display: flex;
+
+  img {
+    margin-left: auto;
+  }
+}
+
+.customer-feedback-container {
+  @include flex-col;
+  @include inter-medium;
+  :nth-last-child(-n + 1) {
+    gap: 10.1rem;
+    border: none;
+  }
+}
+
+.each-customer-feedback {
+  display: flex;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $Grey-100;
+  .wrap-name-comment {
+    @include flex-col;
+    gap: 4px;
+
+    :nth-child(-n + 1) {
+      color: $Grey-600;
+    }
+    :nth-child(-2n + 2) {
+      color: $Grey-400;
+    }
+  }
+  :nth-child(-2n + 2) {
+    margin-left: auto;
+  }
+}

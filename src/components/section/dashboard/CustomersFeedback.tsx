@@ -11,12 +11,14 @@ const CustomersFeedback = () => {
           alt="This is a dot icon."
         />
       </div>
-      <div className="">
+      <div className="customer-feedback-container">
         {dashboardData.customersFeedback.userComment.map((data) => {
           return (
-            <div className="">
-              <span>{data.name}</span>
-              <span>{data.comment}</span>
+            <div className="each-customer-feedback">
+              <div className="wrap-name-comment">
+                <span>{data.name}</span>
+                <span>{data.comment}</span>
+              </div>
               <span>{data.roomNumber}</span>
             </div>
           );
