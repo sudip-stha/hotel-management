@@ -191,7 +191,8 @@ header {
       color: $Grey-900;
     }
     .three-dot-col {
-      width: 1rem;
+      width: 2rem;
+      margin-left: 3rem;
       cursor: pointer;
     }
 
@@ -309,7 +310,7 @@ header {
 // dashboard css
 .dashboard-main-container {
   background-color: $Dashboard;
-  padding: 20px;
+  padding: 24px;
 }
 
 .dashboard-top {

@@ -267,3 +267,5 @@ export interface CustomersFeedbackType {
   dotIcon: string;
   userComment: UserCommentType[];
 }
+
+//For Front Desk

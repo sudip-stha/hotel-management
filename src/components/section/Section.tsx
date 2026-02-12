@@ -1,7 +1,7 @@
 import Guest from "./guest/Guest";
 import Deal from "../section/Deal";
 import { Route, Routes } from "react-router-dom";
-import FrontDesk from "../section/FrontDesk";
+import FrontDesk from "./frontDesk/FrontDesk";
 import Rate from "../section/Rate";
 import Room from "../section/Room";
 import Dashboard from "./dashboard/Dashboard";

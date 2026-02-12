@@ -6,7 +6,7 @@ import Guest from "./components/section/guest/Guest.tsx";
 import Deal from "./components/section/Deal.tsx";
 import Room from "./components/section/Room.tsx";
 import Rate from "./components/section/Rate.tsx";
-import FrontDesk from "./components/section/FrontDesk.tsx";
+import FrontDesk from "./components/section/frontDesk/FrontDesk.tsx";
 import Dashboard from "./components/section/dashboard/Dashboard.tsx";
 import { AppRoutes } from "./data/routes.ts";
 
