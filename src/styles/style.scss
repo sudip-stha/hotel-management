@@ -306,6 +306,7 @@ header {
   color: $Grey-400;
 }
 
+// dashboard css
 .dashboard-main-container {
   background-color: $Dashboard;
   padding: 20px;
@@ -336,6 +337,7 @@ header {
   }
 }
 
+//overview section css
 .overview-data-container {
   display: flex;
   gap: 9rem;
@@ -361,6 +363,7 @@ header {
   }
 }
 
+// room section css
 .dashboard-room-container {
   display: flex;
   gap: 2rem;
@@ -424,6 +427,7 @@ header {
   gap: 1.3rem;
 }
 
+//room status section css
 .room-status-container {
   display: flex;
   gap: 11rem;
@@ -450,6 +454,7 @@ header {
     color: $Grey-400;
   }
 }
+//Floor Status section css
 
 .doughnut-wrapper {
   margin-left: 3rem;
@@ -494,6 +499,15 @@ header {
 
   .remain {
     background-color: $Dashboard;
+  }
+}
+//occupancy statistic section css
+
+.top-part-occupancy {
+  display: flex;
+
+  button {
+    margin-left: auto;
   }
 }
 

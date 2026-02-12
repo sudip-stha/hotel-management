@@ -253,4 +253,5 @@ export interface OccupancyStatistics {
   octStats: number;
   novStats: number;
   decStats: number;
+  monthBtn: SecondaryBtnType;
 }

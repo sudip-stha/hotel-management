@@ -109,16 +109,20 @@ const floorStatus: FloorStatus = {
 
 const occupancyStatistics: OccupancyStatistics = {
   title: "Occupancy Statistics",
-  janStats:99,
-  febStats:100,
-  mayStats:88,
-  junStats:65,
-  julStats:83,
-  augStats:40,
-  sepStats:100,
-  octStats:85,
-  novStats:85,
-  decStats:85,
+  janStats: 99,
+  febStats: 100,
+  mayStats: 88,
+  junStats: 65,
+  julStats: 83,
+  augStats: 40,
+  sepStats: 100,
+  octStats: 85,
+  novStats: 85,
+  decStats: 85,
+  monthBtn: {
+    title: "Monthly",
+    icon: "/images/calendarIcon.svg",
+  },
 };
 
 export const dashboardData = {
