@@ -22,16 +22,12 @@ const checkDate: CheckDateType = {
   checkOut: "Check out",
 };
 
-const AgeYears: AgeYears[] = [
-  {
-    title: "Adult",
-    description: "Older than 12 years",
-  },
-  {
-    title: "Children",
-    description: "0-12 years",
-  },
-];
+const AgeYears: AgeYears = {
+  adultTitle: "Adult",
+  adultDescription: "Older than 12 years",
+  childrenTitle: "Children",
+  childrenDescription: "0-12 years",
+};
 
 const IncAndDecBtn: IncAndDecBtnType = {
   incrementBtn: "/images/plusIcon.svg",

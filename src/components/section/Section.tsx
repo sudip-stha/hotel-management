@@ -10,6 +10,7 @@ import { AppRoutes } from "../../data/routes";
 const Section = () => {
   return (
     <Routes>
+      <Route path="/" element={<Dashboard />} />
       <Route path={AppRoutes.dashboard} element={<Dashboard />} />
       <Route path={AppRoutes.guest} element={<Guest />} />
       <Route path={AppRoutes.deal} element={<Deal />} />

@@ -8,7 +8,7 @@ const FrontDesk = () => {
   return (
     <div className="container">
       <Heading_6 value={frontDeskData.title} />
-
+      
       <FrontDeskCheckAvailability />
       <div className="table-container">
         <RoomTableHead item={frontDeskData.tableTitle} />

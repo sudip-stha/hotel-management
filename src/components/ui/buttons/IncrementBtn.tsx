@@ -1,11 +1,14 @@
-import { frontDeskData } from "../../../data/frontDesk"
+import { frontDeskData } from "../../../data/frontDesk";
+import type { IncBtnClickHandle } from "../../../types/data";
 
-const IncrementBtn = () => {
+const IncrementBtn = ({ handleClick }: IncBtnClickHandle) => {
   return (
     <div>
-      <button className="increase-btn"><img src={frontDeskData.IncAndDecBtn.incrementBtn} alt="" /></button>
+      <button className="increase-btn" onClick={handleClick}>
+        <img src={frontDeskData.IncAndDecBtn.incrementBtn} alt="" />
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default IncrementBtn
+export default IncrementBtn;

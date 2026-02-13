@@ -280,11 +280,21 @@ export interface CheckDateType {
 }
 
 export interface AgeYears {
-  title: string;
-  description: string;
+  adultTitle: string;
+  adultDescription: string;
+  childrenTitle: string;
+  childrenDescription: string;
 }
 
-export interface IncAndDecBtnType{
-   incrementBtn: string,
-  DecrementBtn: string,
+export interface IncAndDecBtnType {
+  incrementBtn: string;
+  DecrementBtn: string;
+}
+
+export interface IncBtnClickHandle {
+  handleClick: () => void;
+}
+
+export interface DecBtnClickHandle extends IncBtnClickHandle {
+  guestCount: number;
 }

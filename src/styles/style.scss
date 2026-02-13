@@ -131,6 +131,7 @@ header {
 .container {
   @include flex-col;
   gap: 1.25rem;
+  margin-bottom: 3rem;
   h6 {
     @include inter-medium($font-size: 12px);
     color: $Grey-400;
@@ -236,7 +237,6 @@ header {
 .guest-bottom-btns {
   display: flex;
   gap: 22.5rem;
-  margin-bottom: 2rem;
   .page-col {
     list-style: none;
     display: flex;
@@ -310,7 +310,9 @@ header {
 // dashboard css
 .dashboard-main-container {
   background-color: $Dashboard;
-  padding: 24px;
+  padding: 20px 20px 12px;
+  @include flex-col;
+  gap: 1.3rem;
 }
 
 .dashboard-top {
@@ -329,7 +331,6 @@ header {
   @include flex-col;
   gap: 1rem;
   padding: 20px 16px;
-  margin-bottom: 20px;
   border-radius: 8px;
 
   h3 {
@@ -458,8 +459,8 @@ header {
 //Floor Status section css
 
 .doughnut-wrapper {
-  margin-left: 3rem;
-  width: 15.3rem;
+  margin-left: 2.9rem;
+  width: 14.4rem;
   height: 8rem;
 }
 
@@ -478,6 +479,7 @@ header {
 .color-indicate {
   @include flex-col;
   gap: 10px;
+  margin-right: 1.5rem;
 }
 
 .color-indicate-item {
@@ -513,7 +515,7 @@ header {
 }
 
 .bar-stats {
-  width: 48rem;
+  width: 47.7rem;
   height: 18rem;
 }
 
@@ -530,7 +532,7 @@ header {
   @include flex-col;
   @include inter-medium;
   :nth-last-child(-n + 1) {
-    gap: 10.1rem;
+    gap: 10.4rem;
     border: none;
   }
 }
@@ -555,6 +557,8 @@ header {
   }
 }
 
+//front desk section css
+
 .increase-btn {
   border: none;
   background-color: transparent;
@@ -569,8 +573,7 @@ header {
   align-items: center;
   background-color: $Grey-50;
   padding: 1.5rem;
-
-  button {
+  .front-desk-check-btn {
     margin-left: auto;
   }
 }
