@@ -10,7 +10,7 @@ const DashboardRoomStatus = () => {
         <div className="room-status-list">
           {dashboardData.roomStatus.occupiedRooms.map((data) => {
             return (
-              <div className="room-status-list-value">
+              <div className="room-status-list-value" key={data.title}>
                 <span className="roomStatus-title">{data.title}</span>
                 <span className="roomStatus-value">{data.value}</span>
               </div>
@@ -20,7 +20,7 @@ const DashboardRoomStatus = () => {
         <div className="room-status-list">
           {dashboardData.roomStatus.availableRooms.map((data) => {
             return (
-              <div className="room-status-list-value">
+              <div key={data.title} className="room-status-list-value">
                 <span>{data.title}</span>
                 <span>{data.value}</span>
               </div>

@@ -5,9 +5,9 @@ import type {
 } from "../types/data";
 
 const buttonValue: ButtonValue = {
-  btn1: "All room(100)",
-  btn2: "Available room(20)",
-  btn3: "Booked(80)",
+  btn1: "All room",
+  btn2: "Available room",
+  btn3: "Booked",
 };
 
 const btn4: SecondaryBtnType = {
@@ -33,72 +33,6 @@ const tableTitle: string[] = [
   "Room facility",
   "Status",
 ];
-// const tableData: RoomTableDataType[] = [
-//   {
-//     roomNumber: "001",
-//     bedType: "Double bed",
-//     roomFloor: "Floor - 1",
-//     roomFacility: "AC, shower, Double bed, towel bathtub, TV",
-//     status: "Available",
-//     dotIcon: "/images/threeDot.svg",
-//   },
-//   {
-//     roomNumber: "002",
-//     bedType: "Single bed",
-//     roomFloor: "Floor -2",
-//     roomFacility: "AC, shower, Double bed, towel bathtub, TV",
-//     status: "Booked",
-//     dotIcon: "/images/threeDot.svg",
-//   },
-//   {
-//     roomNumber: "003",
-//     bedType: "VIP",
-//     roomFloor: "Floor -1",
-//     roomFacility: "AC, shower, Double bed, towel bathtub, TV",
-//     status: "Booked",
-//     dotIcon: "/images/threeDot.svg",
-//   },
-//   {
-//     roomNumber: "004",
-//     bedType: "VIP",
-//     roomFloor: "Floor -1",
-//     roomFacility: "AC, shower, Double bed, towel bathtub, TV",
-//     status: "Reserved",
-//     dotIcon: "/images/threeDot.svg",
-//   },
-//   {
-//     roomNumber: "005",
-//     bedType: "Single bed",
-//     roomFloor: "Floor -1",
-//     roomFacility: "AC, shower, Double bed, towel bathtub, TV",
-//     status: "Reserved",
-//     dotIcon: "/images/threeDot.svg",
-//   },
-//   {
-//     roomNumber: "006",
-//     bedType: "Double bed",
-//     roomFloor: "Floor -2",
-//     roomFacility: "AC, shower, Double bed, towel bathtub, TV",
-//     status: "Waitlist",
-//     dotIcon: "/images/threeDot.svg",
-//   },
-//   {
-//     roomNumber: "007",
-//     bedType: "Double bed",
-//     roomFloor: "Floor -3",
-//     roomFacility: "AC, shower, Double bed, towel bathtub, TV",
-//     status: "Reserved",
-//     dotIcon: "/images/threeDot.svg",
-//   },
-//   {
-//     roomNumber: "008",
-//     bedType: "Single bed",
-//     roomFloor: "Floor -5",
-//     roomFacility: "AC, shower, Double bed, towel bathtub, TV",
-//     status: "Blocked",
-//     dotIcon: "/images/threeDot.svg",
-//   },
-// ];
 
 const tableData: RoomTableDataType[] = [
   {
@@ -191,7 +125,7 @@ const tableData: RoomTableDataType[] = [
   },
   {
     roomNumber: "012",
-    bedType: "Suite",
+    bedType: "VIP",
     roomFloor: "Floor - 4",
     roomFacility: "AC, shower, King bed, Mini-bar, TV",
     status: "Available",

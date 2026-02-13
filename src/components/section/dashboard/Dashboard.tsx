@@ -9,13 +9,16 @@ import OccupancyStatistics from "./OccupancyStatistics";
 import CustomersFeedback from "./CustomersFeedback";
 
 const Dashboard = () => {
+  
   const todayDate = new Date();
+  
   const formatted = todayDate.toLocaleDateString("en-US", {
     weekday: "long",
     month: "long",
     day: "numeric",
     year: "numeric",
   });
+
   return (
     <div>
       <div className="dashboard-top">

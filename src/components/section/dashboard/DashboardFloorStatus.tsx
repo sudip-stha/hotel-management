@@ -6,7 +6,7 @@ import Heading_3 from "../../ui/heading/Heading_3";
 const DashboardFloorStatus = () => {
   ChartJS.register(ArcElement, Tooltip, Legend);
   const completed = dashboardData.floorStatus.completed;
-  const data = {
+  const data = { 
     datasets: [
       {
         data: [completed, 100 - completed],

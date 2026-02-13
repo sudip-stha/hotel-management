@@ -298,3 +298,7 @@ export interface IncBtnClickHandle {
 export interface DecBtnClickHandle extends IncBtnClickHandle {
   guestCount: number;
 }
+
+export interface UpdateRoomType {
+  updateRoom: () => void;
+}

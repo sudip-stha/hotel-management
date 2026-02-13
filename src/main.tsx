@@ -4,11 +4,17 @@ import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Guest from "./components/section/guest/Guest.tsx";
 import Deal from "./components/section/Deal.tsx";
-import Room from "./components/section/Room.tsx";
+import Room from "./components/section/room/Room.tsx";
 import Rate from "./components/section/Rate.tsx";
 import FrontDesk from "./components/section/frontDesk/FrontDesk.tsx";
 import Dashboard from "./components/section/dashboard/Dashboard.tsx";
 import { AppRoutes } from "./data/routes.ts";
+
+// lazy
+// suspense
+// react modern hooks
+// code splitting
+// memo
 
 const router = createBrowserRouter([
   {

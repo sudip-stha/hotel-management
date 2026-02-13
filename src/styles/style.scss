@@ -277,7 +277,7 @@ header {
   align-items: center;
 }
 
-.individual-guest-card {
+.individual-card {
   background-color: #fff;
   padding: 1rem;
   border-radius: 8px;
@@ -285,7 +285,7 @@ header {
   gap: 1rem;
   align-items: center;
   box-shadow: 9px 7px 30px 2px black;
-  .individual-guest-info {
+  .individual-info {
     @include flex-col;
     gap: 6px;
   }
@@ -554,7 +554,6 @@ header {
 }
 
 //front desk section css
-
 .increase-btn {
   border: none;
   background-color: transparent;

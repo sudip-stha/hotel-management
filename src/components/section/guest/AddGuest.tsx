@@ -1,6 +1,6 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { guestData } from "../../../data/guest";
-import Heading from "../../ui/heading/Headin_6";
+import Heading_6 from "../../ui/heading/Headin_6";
 import type { UpdateGuestType } from "../../../types/data";
 
 const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
@@ -79,7 +79,7 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
     <div>
       <form
         onSubmit={handleSubmit}
-        className="individual-guest-card"
+        className="individual-card"
         onClick={(e) => e.stopPropagation()}
       >
         <input
@@ -91,8 +91,8 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
           required
         />
 
-        <div className="individual-guest-info">
-          <Heading value={guestData.guestFormTitle.reservationId} />
+        <div className="individual-info">
+          <Heading_6 value={guestData.guestFormTitle.reservationId} />
           <input
             type="text"
             id="reservationId"
@@ -101,19 +101,19 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
             title="Required 4 digit number"
             onChange={handleChange}
             onInvalid={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity(
+              (e.target as unknown as HTMLInputElement).setCustomValidity(
                 "Required 4 digit number",
               )
             }
             onInput={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity("")
+              (e.target as unknown as HTMLInputElement).setCustomValidity("")
             }
             required
           />
         </div>
 
-        <div className="individual-guest-info">
-          <Heading value={guestData.guestFormTitle.name} />
+        <div className="individual-info">
+          <Heading_6 value={guestData.guestFormTitle.name} />
           <input
             type="text"
             id="name"
@@ -124,19 +124,19 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
             maxLength={255}
             onChange={handleChange}
             onInvalid={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity(
+              (e.target as unknown as HTMLInputElement).setCustomValidity(
                 "Only letters are allowed",
               )
             }
             onInput={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity("")
+              (e.target as unknown as HTMLInputElement).setCustomValidity("")
             }
             required
           />
         </div>
 
-        <div className="individual-guest-info">
-          <Heading value={guestData.guestFormTitle.roomNumber} />
+        <div className="individual-info">
+          <Heading_6 value={guestData.guestFormTitle.roomNumber} />
           <input
             type="text"
             id="roomNumber"
@@ -145,19 +145,19 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
             title="Only letters and numbers are allowed ( example: A345 )"
             onChange={handleChange}
             onInvalid={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity(
+              (e.target as unknown as HTMLInputElement).setCustomValidity(
                 "Only letters and numbers are allowed ( example: A345 )",
               )
             }
             onInput={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity("")
+              (e.target as unknown as HTMLInputElement).setCustomValidity("")
             }
             required
           />
         </div>
 
-        <div className="individual-guest-info">
-          <Heading value={guestData.guestFormTitle.totalAmt} />
+        <div className="individual-info">
+          <Heading_6 value={guestData.guestFormTitle.totalAmt} />
           <input
             type="text"
             id="totalAmt"
@@ -166,19 +166,19 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
             title="Only numbers are allowed"
             onChange={handleChange}
             onInvalid={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity(
+              (e.target as unknown as HTMLInputElement).setCustomValidity(
                 "Only numbers are allowed",
               )
             }
             onInput={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity("")
+              (e.target as unknown as HTMLInputElement).setCustomValidity("")
             }
             required
           />
         </div>
 
-        <div className="individual-guest-info">
-          <Heading value={guestData.guestFormTitle.amtPaid} />
+        <div className="individual-info">
+          <Heading_6 value={guestData.guestFormTitle.amtPaid} />
           <input
             type="text"
             id="amtPaid"
@@ -187,19 +187,19 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
             title="Only number are allowed"
             onChange={handleChange}
             onInvalid={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity(
+              (e.target as unknown as HTMLInputElement).setCustomValidity(
                 "Only numbers are allowed",
               )
             }
             onInput={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity("")
+              (e.target as unknown as HTMLInputElement).setCustomValidity("")
             }
             required
           />
         </div>
 
-        <div className="individual-guest-info">
-          <Heading value={guestData.guestFormTitle.checkInDate} />
+        <div className="individual-info">
+          <Heading_6 value={guestData.guestFormTitle.checkInDate} />
           <input
             type="text"
             id="checkInDate"
@@ -208,7 +208,7 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
             title="Match pattern: 2/2/26"
             onChange={handleChange}
             onInvalid={(e) =>
-              (e.target as HTMLInputElement).setCustomValidity(
+              (e.target as unknown as HTMLInputElement).setCustomValidity(
                 "Match pattern: 2/2/26 and You cannot enter a past date.",
               )
             }
@@ -217,8 +217,8 @@ const AddGuest = ({ updateGuest, totalGuest, onClose }: UpdateGuestType) => {
           />
         </div>
 
-        <div className="individual-guest-info">
-          <Heading value={guestData.guestFormTitle.status} />
+        <div className="individual-info">
+          <Heading_6 value={guestData.guestFormTitle.status} />
           <select id="status" onChange={handleChangeStatus} required>
             <option value="">status</option>
             <option value="Clean">Clean</option>

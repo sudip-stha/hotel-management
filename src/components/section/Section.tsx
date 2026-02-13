@@ -3,14 +3,14 @@ import Deal from "../section/Deal";
 import { Route, Routes } from "react-router-dom";
 import FrontDesk from "./frontDesk/FrontDesk";
 import Rate from "../section/Rate";
-import Room from "../section/Room";
+import Room from "./room/Room";
 import Dashboard from "./dashboard/Dashboard";
 import { AppRoutes } from "../../data/routes";
 
 const Section = () => {
   return (
     <Routes>
-      <Route path="/" element={<Dashboard />} />
+      <Route path={AppRoutes.home} element={<Dashboard />} />
       <Route path={AppRoutes.dashboard} element={<Dashboard />} />
       <Route path={AppRoutes.guest} element={<Guest />} />
       <Route path={AppRoutes.deal} element={<Deal />} />
