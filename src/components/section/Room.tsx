@@ -5,10 +5,24 @@ import AddButton from "../ui/buttons/AddButton";
 import RoomTableHead from "../table/RoomTableHead";
 import RoomTableData from "../table/RoomTableData";
 import PaginationList from "./guest/PaginationList";
-
-function hanldePagination() {}
+import { useSearchParams } from "react-router-dom";
+import { useState } from "react";
 
 const Room = () => {
+  const actualTableData = roomData.tableData;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [, setSearchParams] = useSearchParams();
+
+  const itemsPerPage = 8;
+  const totalPages = Math.ceil(actualTableData.length / itemsPerPage);
+  const endIndex = currentPage * itemsPerPage;
+  const startIndex = endIndex - itemsPerPage;
+
+  function hanldePagination(pageNumber: number) {
+    setCurrentPage(pageNumber);
+    setSearchParams({ page: pageNumber.toString() });
+  }
+  const currentList = actualTableData.slice(startIndex, endIndex);
   return (
     <div className="container">
       <Heading_6 value={roomData.title} />
@@ -24,14 +38,14 @@ const Room = () => {
       </div>
       <div className="table-container">
         <RoomTableHead item={roomData.tableTitle} />
-        <RoomTableData data={roomData.tableData} />
+        <RoomTableData data={currentList} />
       </div>
 
       <div className="guest-bottom-btns">
         <PaginationList
-          totalPages={7}
+          totalPages={totalPages}
           hanldePagination={hanldePagination}
-          currentPage={1}
+          currentPage={currentPage}
         />
       </div>
     </div>
