@@ -28,27 +28,11 @@ const Room = () => {
       </div>
 
       <div className="guest-bottom-btns">
-        {/* <Button
-          value={roomData.btn6}
-          btnAction={{
-            action: "",
-            onClick: () => {},
-            disabled: false,
-          }}
-        /> */}
         <PaginationList
           totalPages={7}
           hanldePagination={hanldePagination}
           currentPage={1}
         />
-        {/* <SecondaryButton
-          value={roomData.btn5}
-          btnAction={{
-            action: "",
-            onClick: () => {},
-            disabled: false,
-          }}
-        /> */}
       </div>
     </div>
   );
