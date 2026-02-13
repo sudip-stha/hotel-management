@@ -291,6 +291,7 @@ header {
   }
   img {
     width: 5rem;
+    border-radius: 50%;
   }
 
   input,
@@ -300,11 +301,6 @@ header {
     border: 1px solid $Grey-200;
     border-radius: 8px;
   }
-}
-
-.current-page-show {
-  @include inter-regular($font-size: 12px);
-  color: $Grey-400;
 }
 
 // dashboard css

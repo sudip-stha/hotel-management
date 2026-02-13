@@ -146,9 +146,6 @@ const Guest = () => {
       </div>
 
       <div className="table-container">
-        <div className="current-page-show">
-          Page {`${currentPage} of ${totalPages}`}
-        </div>
         <TableHead item={guestData.tableTitle} />
         <GuestTableData
           data={currentList}
