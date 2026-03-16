@@ -1,23 +1,27 @@
-import Guest from "./guest/Guest";
-import Deal from "../section/Deal";
 import { Route, Routes } from "react-router-dom";
-import FrontDesk from "./frontDesk/FrontDesk";
-import Rate from "../section/Rate";
-import Room from "./room/Room";
-import Dashboard from "./dashboard/Dashboard";
 import { AppRoutes } from "../../data/routes";
+import { lazy, Suspense } from "react";
+
+const Dashboard = lazy(() => import("./dashboard/Dashboard"));
+const Guest = lazy(() => import("./guest/Guest"));
+const Deal = lazy(() => import("./Deal"));
+const Room = lazy(() => import("./room/Room"));
+const Rate = lazy(() => import("./Rate/Rate"));
+const FrontDesk = lazy(() => import("./frontDesk/FrontDesk"));
 
 const Section = () => {
   return (
-    <Routes>
-      <Route path={AppRoutes.home} element={<Dashboard />} />
-      <Route path={AppRoutes.dashboard} element={<Dashboard />} />
-      <Route path={AppRoutes.guest} element={<Guest />} />
-      <Route path={AppRoutes.deal} element={<Deal />} />
-      <Route path={AppRoutes.room} element={<Room />} />
-      <Route path={AppRoutes.rate} element={<Rate />} />
-      <Route path={AppRoutes.forntDesk} element={<FrontDesk />} />
-    </Routes>
+    <Suspense fallback={<p>Loading....</p>}>
+      <Routes>
+        <Route path={AppRoutes.home} element={<Dashboard />} />
+        <Route path={AppRoutes.dashboard} element={<Dashboard />} />
+        <Route path={AppRoutes.guest} element={<Guest />} />
+        <Route path={AppRoutes.deal} element={<Deal />} />
+        <Route path={AppRoutes.room} element={<Room />} />
+        <Route path={AppRoutes.rate} element={<Rate />} />
+        <Route path={AppRoutes.forntDesk} element={<FrontDesk />} />
+      </Routes>
+    </Suspense>
   );
 };
 

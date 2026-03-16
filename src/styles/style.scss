@@ -121,9 +121,12 @@ header {
 .profile-wrap {
   margin-left: auto;
   display: flex;
-  gap: 2.1rem;
+  gap: 2rem;
+  align-items: center;
   :nth-of-type(-2n + 2) {
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -140,6 +143,7 @@ header {
 
 .btns-container {
   display: flex;
+  gap: 6px;
   .left-side-btns {
     display: flex;
     gap: 12px;
@@ -380,6 +384,7 @@ header {
         background-color: $Success-100;
         color: $Success-700;
         padding: 2px 8px;
+        width: 4rem;
         border-radius: 4px;
         @include inter-medium($font-size: 12px);
       }

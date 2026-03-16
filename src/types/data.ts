@@ -163,9 +163,12 @@ export interface guestIndividualTitleType {
   discount: string;
 }
 
-export interface guestIndividualType {
-  guest: GuestTableDataType;
+export interface CloseType {
   onClose: () => void;
+}
+
+export interface guestIndividualType extends CloseType {
+  guest: GuestTableDataType;
 }
 
 export interface GuestFormTitleType {
@@ -191,10 +194,9 @@ export interface UpdateGuestArgumentType {
   dotIcon: string;
 }
 
-export interface UpdateGuestType {
+export interface UpdateGuestType extends CloseType {
   updateGuest: (from: UpdateGuestArgumentType) => void;
   totalGuest: number;
-  onClose: () => void;
 }
 
 export interface OverviewType {
@@ -299,6 +301,16 @@ export interface DecBtnClickHandle extends IncBtnClickHandle {
   guestCount: number;
 }
 
-export interface UpdateRoomType {
-  updateRoom: () => void;
+export interface UpdateRoomType extends CloseType {
+  updateRoom: (form: RoomTableDataType) => void;
+  actualTableData: RoomTableDataType[];
+}
+
+export interface UpdateRoomType extends CloseType {
+  updateRoom: (form: RoomTableDataType) => void;
+  actualTableData: RoomTableDataType[];
+}
+
+export interface UpdateRateType extends CloseType {
+  updateRate: (form: RateTableDataType) => void;
 }

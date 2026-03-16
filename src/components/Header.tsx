@@ -2,10 +2,7 @@ import { header, input } from "../data/header";
 import Input from "./ui/input/Input";
 
 const Header = () => {
-
-  
   function getInput() {}
-
 
   return (
     <header>

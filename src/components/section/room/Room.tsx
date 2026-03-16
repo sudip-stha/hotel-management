@@ -8,6 +8,7 @@ import PaginationList from "../guest/PaginationList";
 import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import AddRoom from "./AddRoom";
+import type { RoomTableDataType } from "../../../types/data";
 
 const Room = () => {
   let actualTableData = roomData.tableData;
@@ -36,7 +37,9 @@ const Room = () => {
   }
 
   //Add room
-  function updateRoom() {}
+  function updateRoom(form: RoomTableDataType) {
+    roomData.tableData.push(form);
+  }
 
   //for Pagination
   const itemsPerPage = 8;
@@ -57,7 +60,11 @@ const Room = () => {
       {/* for open a room add form */}
       {addBtn && (
         <div className="overlay-card" onClick={() => setAddBtn(false)}>
-          <AddRoom updateRoom={updateRoom} />
+          <AddRoom
+            updateRoom={updateRoom}
+            actualTableData={actualTableData}
+            onClose={() => setAddBtn(false)}
+          />
         </div>
       )}
 
