@@ -79,8 +79,6 @@ It includes a dashboard with hotel statistics and charts, along with separate ma
 - **SCSS / Sass** — Styling and responsive layouts
 - **Chart.js** — Data visualization
 - **react-chartjs-2** — React integration for Chart.js
-- **ESLint** — Code quality and linting
-- **Git / GitHub** — Version control
 
 ## Charts
 
@@ -210,7 +208,7 @@ npm -v
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/hotel-management.git
+git clone https://github.com/sudip-stha/hotel-management.git
 ```
 
 Move into the project directory:
